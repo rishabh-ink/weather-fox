@@ -35,13 +35,14 @@ define({
 	},
 
 	refreshTimeouts: {
-		cache: (120 * 60 * 1000) // 120 mins in milliseconds.
+		cache: (120 * 60 * 1000), // 120 mins in milliseconds.
+		maximumAge: 3600000 // 1 hour in milliseconds.
 	},
 
 	errors: {
-		timeoutError: 20000,
-		timeoutWarn: 5000,
-		timeoutInfo: 2000,
+		timeoutLong: 10000,
+		timeoutMedium: 5000,
+		timeoutShort: 2000,
 		storage: {
 			FOUND: {
 				code: -5000,

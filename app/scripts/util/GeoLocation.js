@@ -21,30 +21,47 @@ function(
 	var Module = function() {
 		var self = this;
 
-		self.position = null;
+		Module.prototype.init = function() {
+			debug.log("util.GeoLocation", "init");
+
+			self.position = null;
+			self.deferred = null;
+		};
 
 		Module.prototype.get = function() {
-			debug.log("util.GeoLocation.get");
+			debug.log("util.GeoLocation", "get");
 
-			var deferred = new jQuery.Deferred();
+			self.deferred = new jQuery.Deferred();
 
 			if(Modernizr.geolocation) {
 				debug.log("util.GeoLocation", "Acquiring geolocation");
 
-				deferred.notify("Waiting for location...");
+				self.deferred.notify("Waiting for location...");
 
-				window.navigator.geolocation.getCurrentPosition(function(p) {
-				  self.position = p;
-				  debug.log("util.GeoLocation", "Acquired geolocation", self.position);
-
-				  deferred.resolve(self.position);
+				window.navigator.geolocation.getCurrentPosition(self.success, self.failure, {
+					maximumAge: Constants.refreshTimeouts.maximumAge
 				});
-			} else {
-				debug.warn("util.GeoLocation", "geolocation not available");
-				deferred.reject();
-			}
 
-			return deferred.promise();
+				return self.deferred.promise();
+			} else {
+				self.failure();
+			}
+		};
+
+		Module.prototype.success = function(position) {
+			debug.log("util.GeoLocation", "success");
+
+			self.position = position;
+			debug.log("util.GeoLocation", "Acquired geolocation", self.position);
+
+			self.deferred.resolve(self.position);
+		};
+
+		Module.prototype.failure = function(error) {
+			debug.log("util.GeoLocation", "failure");
+
+			debug.warn("util.GeoLocation", "geolocation not available", error);
+			self.deferred.reject("Unable to obtain your location. Please check your location settings.");
 		};
 
 		return self;

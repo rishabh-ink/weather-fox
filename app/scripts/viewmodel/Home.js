@@ -39,6 +39,7 @@ function(
       self.city = City.create();
       self.network = Network.create();
       self.storage = Storage.create();
+      self.errorHandler = ErrorHandler.create();
 
       var cacheStatus = self.load();
 
@@ -68,6 +69,8 @@ function(
           if("undefined" !== typeof data.coords) {
             self.city.weather.location.geo.lat(data.coords.latitude);
             self.city.weather.location.geo.long(data.coords.longitude);
+
+            self.errorHandler.hideMessage();
           }
 
           self.fetchData();
@@ -75,20 +78,21 @@ function(
       );
 
       geoPromise.progress(function(data) {
-        jQuery.mobile.loading("show", {
+        self.errorHandler.showMessage({
           text: data,
           textVisible: true
         });
       });
 
-      geoPromise.always(function() {
-        jQuery.mobile.loading("hide");
-      });
-
       geoPromise.fail(
         // Failure callback
-        function() {
-          debug.warn("viewmodel.Home", "fetchLocation", "Failed to get geo-location.");
+        function(data) {
+          debug.warn("viewmodel.Home", "fetchLocation", "Failed to get geo-location.", data);
+
+          self.errorHandler.showMessage({
+            text: data,
+            textVisible: true
+          }, Constants.errors.timeoutLong);
         }
       );
     };
@@ -131,6 +135,11 @@ function(
 
       debug.log("viewmodel.Home", "fetchWeather", "Fetching weather", self.city);
 
+      self.errorHandler.showMessage({
+        text: "Obtaining weather for your location...",
+        textVisible: true
+      });
+
       var weatherPromise = self.network.getWeather(location);
 
       weatherPromise.done(function(data) {
@@ -148,11 +157,18 @@ function(
 
           debug.log("viewmodel.Home", "fetchWeather", "Saving to localStorage...");
           self.save(data);
+
+          self.errorHandler.hideMessage();
         }
       });
 
       weatherPromise.fail(function() {
-        debug.warn("viewmodel.Home", "fetchWeather", "AJAX failed, Unable to setup weather.");
+        debug.warn("viewmodel.Home", "fetchWeather", "Failed to get weather info.");
+
+        self.errorHandler.showMessage({
+          text: "Sorry, could not obtain weather information. Please try again.",
+          textVisible: true
+        }, Constants.errors.timeoutLong);
       });
     };
 

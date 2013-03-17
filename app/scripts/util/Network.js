@@ -6,52 +6,56 @@
  * @author rishabhsrao
  */
 define([
-	"lib.use!lib.debug",
-	"util.Constants",
-	"util.ErrorHandler",
-	"jquery"
+  "lib.use!lib.debug",
+  "util.Constants",
+  "util.ErrorHandler",
+  "jquery"
 ],
 function(
-	debug,
-	Constants,
-	ErrorHandler,
-	jQuery
+  debug,
+  Constants,
+  ErrorHandler,
+  jQuery
 ) {
-	debug.log("Loading util.Network");
-	var Network = function() {
-		var self = this;
+  debug.log("Loading util.Network");
+  var Network = function() {
+    var self = this;
 
-		Network.prototype.init = function() {
-			debug.log("util.Network.init");
-			$.ajaxSetup({
-			  type: "GET",
-			  dataType: "json"
-			});
-		};
+    Network.prototype.init = function() {
+      debug.log("util.Network.init");
+      $.ajaxSetup({
+        type: "GET",
+        dataType: "json"
+      });
 
-		Network.prototype.getWeather = function(location) {
-			debug.log("util.Network.getWeather", "Making AJAX request", {
-				location: location,
-				url: Constants.api.test.baseUrl
-			});
+      self.errorHandler = ErrorHandler.create();
+    };
 
-			return jQuery.ajax({
-				url: Constants.api.test.baseUrl,
-				data: {
-					'_id': Constants.api.test.methods.weather,
-					'_render': "json",
-					'location': location
-				}
-			}).promise();
-		};
+    Network.prototype.getWeather = function(location) {
+      debug.log("util.Network.getWeather", "Making AJAX request", {
+        location: location,
+        url: Constants.api.pipes.baseUrl
+      });
 
-		self.init();
-		return self;
-	};
+      var weatherPromise = jQuery.ajax({
+        url: Constants.api.pipes.baseUrl,
+        data: {
+          '_id': Constants.api.pipes.methods.weather,
+          '_render': "json",
+          'location': location
+        }
+      }).promise();
 
-	return {
-		create: function() {
-			return new Network();
-		}
-	};
+      return weatherPromise;
+    };
+
+    self.init();
+    return self;
+  };
+
+  return {
+    create: function() {
+      return new Network();
+    }
+  };
 });

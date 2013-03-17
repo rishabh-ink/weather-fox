@@ -21,22 +21,21 @@ function(
 	var Module = function() {
 		var self = this;
 
-		Module.prototype.showError = function(error) {
-			debug.error(error);
-			jQuery.mobile.showPageLoadingMsg("e", error, true);
-			setTimeout(jQuery.mobile.hidePageLoadingMsg, Constants.errors.timeoutError);
+		Module.prototype.showMessage = function(error, timeout) {
+			debug.log("ErrorHandler", "showMessage", error);
+
+			jQuery.mobile.loading("show", error);
+
+			if("undefined" !== typeof timeout) {
+				setTimeout(function() {
+					self.hideMessage();
+				}, timeout);
+			}
 		};
 
-		Module.prototype.showWarn = function(error) {
-			debug.warn(error);
-			jQuery.mobile.showPageLoadingMsg("e", error, true);
-			setTimeout(jQuery.mobile.hidePageLoadingMsg, Constants.errors.timeoutWarn);
-		};
-
-		Module.prototype.showInfo = function(error) {
-			debug.info(error);
-			jQuery.mobile.showPageLoadingMsg("a", error, true);
-			setTimeout(jQuery.mobile.hidePageLoadingMsg, Constants.errors.timeoutInfo);
+		Module.prototype.hideMessage = function() {
+			debug.log("ErrorHandler", "hideMessage");
+			jQuery.mobile.loading("hide");
 		};
 
 		return self;
