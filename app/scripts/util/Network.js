@@ -32,13 +32,13 @@ function(
 		Network.prototype.getWeather = function(location) {
 			debug.log("util.Network.getWeather", "Making AJAX request", {
 				location: location,
-				url: Constants.api.pipes.baseUrl
+				url: Constants.api.test.baseUrl
 			});
 
 			return jQuery.ajax({
-				url: Constants.api.pipes.baseUrl,
+				url: Constants.api.test.baseUrl,
 				data: {
-					'_id': Constants.api.pipes.methods.weather,
+					'_id': Constants.api.test.methods.weather,
 					'_render': "json",
 					'location': location
 				}
