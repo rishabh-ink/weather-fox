@@ -6,15 +6,16 @@
 </head>
 <body>
     <div class="today cartographer" data-page-name="home" data-role="page" data-theme="a">
-        <!-- <div data-role="panel" id="main-menu" data-display="overlay">
-            <ul data-role="listview" data-theme="a">
-                <li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
-                <li data-icon="settings"><a href="#">Settings</a></li>
-            </ul>
-        </div> -->
+        <div data-role="panel" id="main-menu" data-display="push">
+        <ul data-role="listview" data-theme="a">
+          <li data-icon="home"><a href="/home.html">Home</a></li>
+          <li data-icon="gear"><a href="/settings.html">Settings</a></li>
+          <li data-icon="info"><a href="/about.html">About</a></li>
+        </ul>
+      </div>
         <header data-role="header">
             <a href="#main-menu" data-icon="bars">Menu</a>
-            <h1>Weather</h1>
+            <h1>Home</h1>
             <!-- ko if: available -->
             <button data-bind="click: refresh" data-icon="refresh">Refresh</button>
             <!-- /ko -->

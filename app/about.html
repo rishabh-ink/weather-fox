@@ -6,12 +6,19 @@
 </head>
 <body>
     <div data-page-name="about" data-role="page" data-theme="a">
-        <header data-role="header">
-          <a href="/home.html" data-icon="home">Home</a>
-            <h1>About</h1>
-        </header>
-        <section data-role="content">
-        </section>
+      <div data-role="panel" id="main-menu" data-display="push">
+        <ul data-role="listview" data-theme="a">
+          <li data-icon="delete"><a href="/home.html">Home</a></li>
+          <li data-icon="gear"><a href="/settings.html">Settings</a></li>
+          <li data-icon="info"><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+      <header data-role="header">
+        <a href="#main-menu" data-icon="bars">Menu</a>
+        <h1>About</h1>
+      </header>
+      <section data-role="content">
+      </section>
     </div>
 </body>
 </html>
