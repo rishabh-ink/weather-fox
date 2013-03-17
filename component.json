@@ -2,9 +2,15 @@
   "name": "weather-fox",
   "version": "0.0.0",
   "dependencies": {
-    "requirejs": "~2.1.4",
+    "requirejs": "~2.1.5",
     "modernizr": "~2.6.2",
-    "jquery": "~1.9.1"
+    "jquery": "~1.9.1",
+    "font-awesome": "~3.0.2",
+    "knockout": "~2.2.1",
+    "requirejs-domready": "~2.0.1",
+    "jquery-mobile": "http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.zip",
+    "use.js": "git://github.com/tbranyen/use.js.git",
+    "sass-bootstrap": "~2.3.1"
   },
   "devDependencies": {}
 }
