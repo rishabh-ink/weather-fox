@@ -43,10 +43,10 @@ function(
 
       var cacheStatus = self.load();
 
-      if(false === cacheStatus) {
-        debug.log("viewmodel.Home", "init", "Data not found in cache. Making the AJAX call...");
-        self.fetchLocation();
-      }
+      // if(false === cacheStatus) {
+      //   debug.log("viewmodel.Home", "init", "Data not found in cache. Making the AJAX call...");
+      //   self.fetchLocation();
+      // }
     };
 
     Module.prototype.refresh = function() {
