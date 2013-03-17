@@ -58,11 +58,23 @@
   ) {
     domReady(function() {
 
+      debug.info("main", "Application initialized...");
+
       var viewModels = {
         home: HomeViewModel.create()
       };
 
-      debug.info("main", "Application initialized...");
+      debug.log("main", "Setting up ajaxStart and ajaxStop event handlers...");
+      jQuery(document).ajaxStart(function() {
+        $.mobile.loading("show", {
+          text: "Please wait...",
+          textVisible: true
+        });
+      });
+
+      jQuery(document).ajaxStop(function() {
+        $.mobile.loading("hide");
+      });
 
       jQuery(document).on("pageinit", function(event) {
         var page = {};

@@ -74,6 +74,10 @@ function(
         }
       );
 
+      geoPromise.progress(function(data) {
+        debug.info("viewmodel.Home", "fetchLocation", "Please wait...", data);
+      });
+
       geoPromise.fail(
         // Failure callback
         function() {
@@ -119,31 +123,34 @@ function(
       debug.log("viewmodel.Home", "fetchWeather");
 
       debug.log("viewmodel.Home", "fetchWeather", "Fetching weather", self.city);
-      self.network.getWeather(location).then(
-        // Success callback
-        function(data) {
-          debug.log("viewmodel.Home", "fetchWeather", "Setting up weather", data);
 
-          if("undefined" !== typeof (data.value.items[0].results)) {
-            if(null === data.value.items[0].results) {
-              debug.error("viewmodel.Home", "fetchWeather", "Invalid data received.");
-            }
-          } else {
-            debug.log("viewmodel.Home", "fetchWeather", "Data received, applying mappings...");
-            self.city.applyMappings(data.value.items[0]);
+      var weatherPromise = self.network.getWeather(location);
 
-            self.available(true);
+      weatherPromise.done(function(data) {
+        debug.log("viewmodel.Home", "fetchWeather", "Setting up weather", data);
 
-            debug.log("viewmodel.Home", "fetchWeather", "Saving to localStorage...");
-            self.save(data);
+        if("undefined" !== typeof (data.value.items[0].results)) {
+          if(null === data.value.items[0].results) {
+            debug.error("viewmodel.Home", "fetchWeather", "Invalid data received.");
           }
-        },
+        } else {
+          debug.log("viewmodel.Home", "fetchWeather", "Data received, applying mappings...");
+          self.city.applyMappings(data.value.items[0]);
 
-        // Failure callback
-        function() {
-          debug.warn("viewmodel.Home", "fetchWeather", "AJAX failed, Unable to setup weather.");
+          self.available(true);
+
+          debug.log("viewmodel.Home", "fetchWeather", "Saving to localStorage...");
+          self.save(data);
         }
-      );
+      });
+
+      weatherPromise.progress(function(data) {
+        debug.info("viewmodel.Home", "fetchWeather", "Please wait...", data);
+      });
+
+      weatherPromise.fail(function() {
+        debug.warn("viewmodel.Home", "fetchWeather", "AJAX failed, Unable to setup weather.");
+      });
     };
 
     self.init();
