@@ -34,29 +34,23 @@ function(
     Module.prototype.init = function() {
       debug.log("viewmodel.Home", "init");
 
-
       self.available = ko.observable(false);
+
       self.city = City.create();
       self.network = Network.create();
       self.storage = Storage.create();
 
-      self.test = ko.observable("hello");
+      var cacheStatus = self.load();
+
+      if(false === cacheStatus) {
+        debug.log("viewmodel.Home", "init", "Data not found in cache. Making the AJAX call...");
+        self.fetchLocation();
+      }
     };
 
     Module.prototype.refresh = function() {
       debug.log("viewmodel.Home", "refresh");
-
       self.fetchLocation();
-
-      // var cacheStatus = self.load();
-
-      // if(false === cacheStatus) {
-      //   debug.log("viewmodel.Home", "refresh", "Data not found in cache.");
-      //   self.fetchLocation();
-
-      //   debug.log("viewmodel.Home", "refresh", "Saving to localStorage...");
-      //   self.save();
-      // }
     };
 
     Module.prototype.fetchLocation = function() {
@@ -98,10 +92,10 @@ function(
       }
     };
 
-    Module.prototype.save = function() {
+    Module.prototype.save = function(data) {
       debug.log("viewmodel.Home", "save");
 
-      self.storage.save(Constants.keyrings.storage.HOME_CITY, self.city);
+      self.storage.save(Constants.keyrings.storage.HOME_CITY, data);
     };
 
     Module.prototype.load = function() {
@@ -111,7 +105,9 @@ function(
 
       if(Constants.errors.storage.FOUND === self.storage.isAlreadyAvailable(Constants.keyrings.storage.HOME_CITY)) {
         data = self.storage.load(Constants.keyrings.storage.HOME_CITY);
-        self.city.applyMappings(data);
+        self.city.applyMappings(data.value.items[0]);
+
+        self.available(true);
 
         return true;
       } else {
@@ -137,6 +133,9 @@ function(
             self.city.applyMappings(data.value.items[0]);
 
             self.available(true);
+
+            debug.log("viewmodel.Home", "fetchWeather", "Saving to localStorage...");
+            self.save(data);
           }
         },
 
