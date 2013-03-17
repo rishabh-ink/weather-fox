@@ -30,7 +30,7 @@ function(
 
 			if(Modernizr.geolocation) {
 				debug.log("util.GeoLocation", "Acquiring geolocation");
-				navigator.geolocation.getCurrentPosition(function(p) {
+				window.navigator.geolocation.getCurrentPosition(function(p) {
 				  self.position = p;
 				  debug.log("util.GeoLocation", "Acquired geolocation", self.position);
 

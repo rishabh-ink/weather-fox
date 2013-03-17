@@ -10,7 +10,8 @@
     'jquery':                    "../components/jquery/jquery", // jquery.com
     'knockout':                  "../components/knockoutjs/index", // knockoutjs.com
     'lib.jquery-mobile':         "../components/jquery-mobile/jquery.mobile-1.3.0", // jquerymobile.com
-    'lib.debug':                 "../components/javascript-debug/ba-debug", //
+    'lib.debug':                 "../components/javascript-debug/ba-debug",
+    'lib.modernizr':             "../components/modernizr/modernizr",
 
     'util.Storage':              "util/Storage",
     'util.Constants':            "util/Constants",
@@ -31,27 +32,9 @@
     'viewmodel.Home':            "viewmodel/Home"
     },
 
-    shim: {
-      'lib.jquery-mobile': {
-        deps: [
-          "jquery"
-        ]
-      },
-
-      'lib.knockout-mapping': {
-        deps: [
-          "knockout"
-        ]
-      }
-    },
-
     use: {
       'lib.debug': {
         'attach': "debug"
-      },
-
-      'lib.jquery-mobile': {
-        'attach': "jquery"
       }
     }
   });
@@ -60,7 +43,7 @@
     "domready",
     "jquery",
     "knockout",
-    "lib.use!lib.jquery-mobile",
+    "lib.jquery-mobile",
     "lib.use!lib.debug",
     "viewmodel.Home",
     "model.City"

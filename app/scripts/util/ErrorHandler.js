@@ -9,7 +9,7 @@ define([
 	"lib.use!lib.debug",
 	"util.Constants",
 	"jquery",
-	"lib.use!lib.jquery-mobile"
+	"lib.jquery-mobile"
 ],
 function(
 	debug,
