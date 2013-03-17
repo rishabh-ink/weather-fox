@@ -1,0 +1,542 @@
+{
+  "count": 7,
+  "value": {
+    "title": "Weather by location v2",
+    "description": "Accepts a location:\n1. A latitude-longitude pair (e.g. 37.42,-122.12)\n2. A place name (e.g. Bangalore, India)\n\nReturns:\nThe weather for the above location.\n\nYou can also pass a delimiter separated values of the above and you will get the weather for all the values.",
+    "link": "http:\/\/pipes.yahoo.com\/pipes\/pipe.info?_id=687279a3ea30ea78c978b1bf6e235055",
+    "pubDate": "Sun, 03 Feb 2013 08:16:44 +0000",
+    "generator": "http:\/\/pipes.yahoo.com\/pipes\/",
+    "callback": "",
+    "items": [{
+      "title": "Yahoo! Weather - Bangalore, IN",
+      "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Bangalore__IN\/*http:\/\/weather.yahoo.com\/forecast\/INXX0012_c.html",
+      "description": "Yahoo! Weather for Bangalore, IN",
+      "language": "en-us",
+      "lastBuildDate": "Sun, 03 Feb 2013 12:29 pm IST",
+      "ttl": "60",
+      "yweather:location": {
+        "city": "Bangalore",
+        "country": "India",
+        "region": "KA",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:units": {
+        "distance": "km",
+        "pressure": "mb",
+        "speed": "km\/h",
+        "temperature": "C",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:wind": {
+        "chill": "26",
+        "direction": "100",
+        "speed": "19.31",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:atmosphere": {
+        "humidity": "18",
+        "pressure": "1015.92",
+        "rising": "2",
+        "visibility": "9.99",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:astronomy": {
+        "sunrise": "6:46 am",
+        "sunset": "6:21 pm",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "image": {
+        "title": "Yahoo! Weather",
+        "width": "142",
+        "height": "18",
+        "link": "http:\/\/weather.yahoo.com",
+        "url": "http:\/\/l.yimg.com\/a\/i\/brand\/purplelogo\/\/uh\/us\/news-wea.gif"
+      },
+      "item": {
+        "title": "Conditions for Bangalore, IN at 12:29 pm IST",
+        "geo:lat": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "12.97"
+        },
+        "geo:long": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "77.54"
+        },
+        "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Bangalore__IN\/*http:\/\/weather.yahoo.com\/forecast\/INXX0012_c.html",
+        "pubDate": "Sun, 03 Feb 2013 12:29 pm IST",
+        "yweather:condition": {
+          "code": "34",
+          "date": "Sun, 03 Feb 2013 12:29 pm IST",
+          "temp": "26",
+          "text": "Fair",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        },
+        "description": "<img src=\"http:\/\/l.yimg.com\/a\/i\/us\/we\/52\/34.gif\"\/><br \/>\n<b>Current Conditions:<\/b><br \/>\nFair, 26 C<br \/>\n<br \/><b>Forecast:<\/b><br \/>\nSun - Partly Cloudy. High: 28 Low: 13<br \/>\nMon - Sunny. High: 30 Low: 15<br \/>\n<br \/>\n<a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Bangalore__IN\/*http:\/\/weather.yahoo.com\/forecast\/INXX0012_c.html\">Full Forecast at Yahoo! Weather<\/a><br\/><br\/>\n(provided by <a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/www.weather.com\">The Weather Channel<\/a>)<br\/>",
+        "yweather:forecast": [{
+          "code": "30",
+          "date": "3 Feb 2013",
+          "day": "Sun",
+          "high": "28",
+          "low": "13",
+          "text": "Partly Cloudy",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }, {
+          "code": "32",
+          "date": "4 Feb 2013",
+          "day": "Mon",
+          "high": "30",
+          "low": "15",
+          "text": "Sunny",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }],
+        "guid": {
+          "isPermaLink": "false",
+          "content": "INXX0012_2013_02_04_7_00_IST"
+        }
+      }
+    }, {
+      "title": "Yahoo! Weather - Berlin, DE",
+      "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Berlin__DE\/*http:\/\/weather.yahoo.com\/forecast\/GMXX1273_c.html",
+      "description": "Yahoo! Weather for Berlin, DE",
+      "language": "en-us",
+      "lastBuildDate": "Sun, 03 Feb 2013 8:20 am CET",
+      "ttl": "60",
+      "yweather:location": {
+        "city": "Berlin",
+        "country": "Germany",
+        "region": "BE",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:units": {
+        "distance": "km",
+        "pressure": "mb",
+        "speed": "km\/h",
+        "temperature": "C",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:wind": {
+        "chill": "-9",
+        "direction": "270",
+        "speed": "19.31",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:atmosphere": {
+        "humidity": "100",
+        "pressure": "982.05",
+        "rising": "1",
+        "visibility": "6",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:astronomy": {
+        "sunrise": "7:45 am",
+        "sunset": "4:54 pm",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "image": {
+        "title": "Yahoo! Weather",
+        "width": "142",
+        "height": "18",
+        "link": "http:\/\/weather.yahoo.com",
+        "url": "http:\/\/l.yimg.com\/a\/i\/brand\/purplelogo\/\/uh\/us\/news-wea.gif"
+      },
+      "item": {
+        "title": "Conditions for Berlin, DE at 8:20 am CET",
+        "geo:lat": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "52.52"
+        },
+        "geo:long": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "13.38"
+        },
+        "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Berlin__DE\/*http:\/\/weather.yahoo.com\/forecast\/GMXX1273_c.html",
+        "pubDate": "Sun, 03 Feb 2013 8:20 am CET",
+        "yweather:condition": {
+          "code": "28",
+          "date": "Sun, 03 Feb 2013 8:20 am CET",
+          "temp": "-3",
+          "text": "Mostly Cloudy",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        },
+        "description": "<img src=\"http:\/\/l.yimg.com\/a\/i\/us\/we\/52\/28.gif\"\/><br \/>\n<b>Current Conditions:<\/b><br \/>\nMostly Cloudy, -3 C<br \/>\n<br \/><b>Forecast:<\/b><br \/>\nSun - Mostly Cloudy. High: 1 Low: -1<br \/>\nMon - Showers. High: 3 Low: 1<br \/>\n<br \/>\n<a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Berlin__DE\/*http:\/\/weather.yahoo.com\/forecast\/GMXX1273_c.html\">Full Forecast at Yahoo! Weather<\/a><br\/><br\/>\n(provided by <a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/www.weather.com\">The Weather Channel<\/a>)<br\/>",
+        "yweather:forecast": [{
+          "code": "28",
+          "date": "3 Feb 2013",
+          "day": "Sun",
+          "high": "1",
+          "low": "-1",
+          "text": "Mostly Cloudy",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }, {
+          "code": "11",
+          "date": "4 Feb 2013",
+          "day": "Mon",
+          "high": "3",
+          "low": "1",
+          "text": "Showers",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }],
+        "guid": {
+          "isPermaLink": "false",
+          "content": "GMXX1273_2013_02_04_7_00_CET"
+        }
+      }
+    }, {
+      "title": "Yahoo! Weather - Paris, FR",
+      "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Paris__FR\/*http:\/\/weather.yahoo.com\/forecast\/FRXX0076_c.html",
+      "description": "Yahoo! Weather for Paris, FR",
+      "language": "en-us",
+      "lastBuildDate": "Sun, 03 Feb 2013 7:58 am CET",
+      "ttl": "60",
+      "yweather:location": {
+        "city": "Paris",
+        "country": "France",
+        "region": "",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:units": {
+        "distance": "km",
+        "pressure": "mb",
+        "speed": "km\/h",
+        "temperature": "C",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:wind": {
+        "chill": "-3",
+        "direction": "290",
+        "speed": "11.27",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:atmosphere": {
+        "humidity": "87",
+        "pressure": "1015.92",
+        "rising": "0",
+        "visibility": "9.99",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:astronomy": {
+        "sunrise": "8:17 am",
+        "sunset": "5:51 pm",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "image": {
+        "title": "Yahoo! Weather",
+        "width": "142",
+        "height": "18",
+        "link": "http:\/\/weather.yahoo.com",
+        "url": "http:\/\/l.yimg.com\/a\/i\/brand\/purplelogo\/\/uh\/us\/news-wea.gif"
+      },
+      "item": {
+        "title": "Conditions for Paris, FR at 7:58 am CET",
+        "geo:lat": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "48.86"
+        },
+        "geo:long": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "2.34"
+        },
+        "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Paris__FR\/*http:\/\/weather.yahoo.com\/forecast\/FRXX0076_c.html",
+        "pubDate": "Sun, 03 Feb 2013 7:58 am CET",
+        "yweather:condition": {
+          "code": "33",
+          "date": "Sun, 03 Feb 2013 7:58 am CET",
+          "temp": "0",
+          "text": "Fair",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        },
+        "description": "<img src=\"http:\/\/l.yimg.com\/a\/i\/us\/we\/52\/33.gif\"\/><br \/>\n<b>Current Conditions:<\/b><br \/>\nFair, 0 C<br \/>\n<br \/><b>Forecast:<\/b><br \/>\nSun - Cloudy. High: 6 Low: 4<br \/>\nMon - Cloudy. High: 9 Low: 4<br \/>\n<br \/>\n<a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Paris__FR\/*http:\/\/weather.yahoo.com\/forecast\/FRXX0076_c.html\">Full Forecast at Yahoo! Weather<\/a><br\/><br\/>\n(provided by <a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/www.weather.com\">The Weather Channel<\/a>)<br\/>",
+        "yweather:forecast": [{
+          "code": "26",
+          "date": "3 Feb 2013",
+          "day": "Sun",
+          "high": "6",
+          "low": "4",
+          "text": "Cloudy",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }, {
+          "code": "26",
+          "date": "4 Feb 2013",
+          "day": "Mon",
+          "high": "9",
+          "low": "4",
+          "text": "Cloudy",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }],
+        "guid": {
+          "isPermaLink": "false",
+          "content": "FRXX0076_2013_02_04_7_00_CET"
+        }
+      }
+    }, {
+      "title": "Yahoo! Weather - London, GB",
+      "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/London__GB\/*http:\/\/weather.yahoo.com\/forecast\/UKXX0085_c.html",
+      "description": "Yahoo! Weather for London, GB",
+      "language": "en-us",
+      "lastBuildDate": "Sun, 03 Feb 2013 7:20 am GMT",
+      "ttl": "60",
+      "yweather:location": {
+        "city": "London",
+        "country": "United Kingdom",
+        "region": "",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:units": {
+        "distance": "km",
+        "pressure": "mb",
+        "speed": "km\/h",
+        "temperature": "C",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:wind": {
+        "chill": "-2",
+        "direction": "240",
+        "speed": "14.48",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:atmosphere": {
+        "humidity": "81",
+        "pressure": "1015.92",
+        "rising": "0",
+        "visibility": "9.99",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:astronomy": {
+        "sunrise": "7:37 am",
+        "sunset": "4:54 pm",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "image": {
+        "title": "Yahoo! Weather",
+        "width": "142",
+        "height": "18",
+        "link": "http:\/\/weather.yahoo.com",
+        "url": "http:\/\/l.yimg.com\/a\/i\/brand\/purplelogo\/\/uh\/us\/news-wea.gif"
+      },
+      "item": {
+        "title": "Conditions for London, GB at 7:20 am GMT",
+        "geo:lat": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "51.51"
+        },
+        "geo:long": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "-0.13"
+        },
+        "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/London__GB\/*http:\/\/weather.yahoo.com\/forecast\/UKXX0085_c.html",
+        "pubDate": "Sun, 03 Feb 2013 7:20 am GMT",
+        "yweather:condition": {
+          "code": "33",
+          "date": "Sun, 03 Feb 2013 7:20 am GMT",
+          "temp": "2",
+          "text": "Fair",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        },
+        "description": "<img src=\"http:\/\/l.yimg.com\/a\/i\/us\/we\/52\/33.gif\"\/><br \/>\n<b>Current Conditions:<\/b><br \/>\nFair, 2 C<br \/>\n<br \/><b>Forecast:<\/b><br \/>\nSun - AM Light Rain. High: 7 Low: 6<br \/>\nMon - Mostly Sunny\/Wind. High: 8 Low: 3<br \/>\n<br \/>\n<a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/London__GB\/*http:\/\/weather.yahoo.com\/forecast\/UKXX0085_c.html\">Full Forecast at Yahoo! Weather<\/a><br\/><br\/>\n(provided by <a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/www.weather.com\">The Weather Channel<\/a>)<br\/>",
+        "yweather:forecast": [{
+          "code": "11",
+          "date": "3 Feb 2013",
+          "day": "Sun",
+          "high": "7",
+          "low": "6",
+          "text": "AM Light Rain",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }, {
+          "code": "24",
+          "date": "4 Feb 2013",
+          "day": "Mon",
+          "high": "8",
+          "low": "3",
+          "text": "Mostly Sunny\/Wind",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }],
+        "guid": {
+          "isPermaLink": "false",
+          "content": "UKXX0085_2013_02_04_7_00_GMT"
+        }
+      }
+    }, {
+      "title": "Yahoo! Weather - Washington, DC",
+      "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Washington__DC\/*http:\/\/weather.yahoo.com\/forecast\/USDC0001_c.html",
+      "description": "Yahoo! Weather for Washington, DC",
+      "language": "en-us",
+      "lastBuildDate": "Sun, 03 Feb 2013 1:51 am EST",
+      "ttl": "60",
+      "yweather:location": {
+        "city": "Washington",
+        "country": "United States",
+        "region": "DC",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:units": {
+        "distance": "km",
+        "pressure": "mb",
+        "speed": "km\/h",
+        "temperature": "C",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:wind": {
+        "chill": "-1",
+        "direction": "280",
+        "speed": "4.83",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:atmosphere": {
+        "humidity": "77",
+        "pressure": "1015.6",
+        "rising": "2",
+        "visibility": "16.09",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:astronomy": {
+        "sunrise": "7:11 am",
+        "sunset": "5:30 pm",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "image": {
+        "title": "Yahoo! Weather",
+        "width": "142",
+        "height": "18",
+        "link": "http:\/\/weather.yahoo.com",
+        "url": "http:\/\/l.yimg.com\/a\/i\/brand\/purplelogo\/\/uh\/us\/news-wea.gif"
+      },
+      "item": {
+        "title": "Conditions for Washington, DC at 1:51 am EST",
+        "geo:lat": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "38.9"
+        },
+        "geo:long": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "-77.03"
+        },
+        "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Washington__DC\/*http:\/\/weather.yahoo.com\/forecast\/USDC0001_c.html",
+        "pubDate": "Sun, 03 Feb 2013 1:51 am EST",
+        "yweather:condition": {
+          "code": "26",
+          "date": "Sun, 03 Feb 2013 1:51 am EST",
+          "temp": "-1",
+          "text": "Cloudy",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        },
+        "description": "<img src=\"http:\/\/l.yimg.com\/a\/i\/us\/we\/52\/26.gif\"\/><br \/>\n<b>Current Conditions:<\/b><br \/>\nCloudy, -1 C<br \/>\n<br \/><b>Forecast:<\/b><br \/>\nSat - Snow Showers. High: 1 Low: -2<br \/>\nSun - AM Snow Showers. High: 4 Low: -3<br \/>\n<br \/>\n<a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Washington__DC\/*http:\/\/weather.yahoo.com\/forecast\/USDC0001_c.html\">Full Forecast at Yahoo! Weather<\/a><br\/><br\/>\n(provided by <a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/www.weather.com\">The Weather Channel<\/a>)<br\/>",
+        "yweather:forecast": [{
+          "code": "14",
+          "date": "2 Feb 2013",
+          "day": "Sat",
+          "high": "1",
+          "low": "-2",
+          "text": "Snow Showers",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }, {
+          "code": "14",
+          "date": "3 Feb 2013",
+          "day": "Sun",
+          "high": "4",
+          "low": "-3",
+          "text": "AM Snow Showers",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }],
+        "guid": {
+          "isPermaLink": "false",
+          "content": "USDC0001_2013_02_03_7_00_EST"
+        }
+      }
+    }, {
+      "xmlns:yahoo": "http:\/\/www.yahooapis.com\/v1\/base.rng",
+      "yahoo:count": "0",
+      "yahoo:created": "2013-02-03T08:16:37Z",
+      "yahoo:lang": "en-US",
+      "results": null,
+      "description": null,
+      "title": null
+    }, {
+      "title": "Yahoo! Weather - Sydney, AU",
+      "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Sydney__AU\/*http:\/\/weather.yahoo.com\/forecast\/ASXX0112_c.html",
+      "description": "Yahoo! Weather for Sydney, AU",
+      "language": "en-us",
+      "lastBuildDate": "Sun, 03 Feb 2013 6:30 pm AEDT",
+      "ttl": "60",
+      "yweather:location": {
+        "city": "Sydney",
+        "country": "Australia",
+        "region": "NSW",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:units": {
+        "distance": "km",
+        "pressure": "mb",
+        "speed": "km\/h",
+        "temperature": "C",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:wind": {
+        "chill": "21",
+        "direction": "180",
+        "speed": "32.19",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:atmosphere": {
+        "humidity": "73",
+        "pressure": "1015.92",
+        "rising": "1",
+        "visibility": "9.99",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "yweather:astronomy": {
+        "sunrise": "6:16 am",
+        "sunset": "7:57 pm",
+        "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+      },
+      "image": {
+        "title": "Yahoo! Weather",
+        "width": "142",
+        "height": "18",
+        "link": "http:\/\/weather.yahoo.com",
+        "url": "http:\/\/l.yimg.com\/a\/i\/brand\/purplelogo\/\/uh\/us\/news-wea.gif"
+      },
+      "item": {
+        "title": "Conditions for Sydney, AU at 6:30 pm AEDT",
+        "geo:lat": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "-33.87"
+        },
+        "geo:long": {
+          "xmlns:geo": "http:\/\/www.w3.org\/2003\/01\/geo\/wgs84_pos#",
+          "content": "151.21"
+        },
+        "link": "http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Sydney__AU\/*http:\/\/weather.yahoo.com\/forecast\/ASXX0112_c.html",
+        "pubDate": "Sun, 03 Feb 2013 6:30 pm AEDT",
+        "yweather:condition": {
+          "code": "28",
+          "date": "Sun, 03 Feb 2013 6:30 pm AEDT",
+          "temp": "21",
+          "text": "Showers in the Vicinity",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        },
+        "description": "<img src=\"http:\/\/l.yimg.com\/a\/i\/us\/we\/52\/28.gif\"\/><br \/>\n<b>Current Conditions:<\/b><br \/>\nShowers in the Vicinity, 21 C<br \/>\n<br \/><b>Forecast:<\/b><br \/>\nSun - Mostly Clear. High: 23 Low: 18<br \/>\nMon - Mostly Sunny. High: 24 Low: 18<br \/>\n<br \/>\n<a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/Sydney__AU\/*http:\/\/weather.yahoo.com\/forecast\/ASXX0112_c.html\">Full Forecast at Yahoo! Weather<\/a><br\/><br\/>\n(provided by <a rel=\"nofollow\" target=\"_blank\" href=\"http:\/\/www.weather.com\">The Weather Channel<\/a>)<br\/>",
+        "yweather:forecast": [{
+          "code": "33",
+          "date": "3 Feb 2013",
+          "day": "Sun",
+          "high": "23",
+          "low": "18",
+          "text": "Mostly Clear",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }, {
+          "code": "34",
+          "date": "4 Feb 2013",
+          "day": "Mon",
+          "high": "24",
+          "low": "18",
+          "text": "Mostly Sunny",
+          "xmlns:yweather": "http:\/\/xml.weather.yahoo.com\/ns\/rss\/1.0"
+        }],
+        "guid": {
+          "isPermaLink": "false",
+          "content": "ASXX0112_2013_02_04_7_00_AEDT"
+        }
+      }
+    }]
+  }
+}

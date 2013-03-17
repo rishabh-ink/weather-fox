@@ -1,0 +1,67 @@
+.today.cartographer {
+  background-image: url("../images/cartographer.png");
+}
+
+.location {
+  @extend .ui-grid-solo;
+
+  .city,
+  .country {
+    @extend .ui-block-a;
+  }
+
+  .city {
+    font-size: $fontSizeHuge;
+  }
+
+  .country {
+    font-size: $fontSizeBig;
+  }
+}
+
+.info {
+  @extend .ui-grid-b;
+  margin-top: $marginBig;
+
+  .current-temperature {
+    @extend .ui-block-a;
+
+    .value {
+      font-size: $fontSizeEnormous;
+    }
+
+    .units {
+      font-size: $fontSizeBig;
+    }
+  }
+
+  .icon {
+    @extend .ui-block-b;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .text {
+    @extend .ui-block-c;
+    @extend .clearfix;
+
+    div {
+      text-align: right;
+    }
+
+    .condition-text {
+      font-size: $fontSizeBig;
+    }
+
+    .condition-date {
+      color: $grayLight;
+      font-size: $fontSizeSmall;
+    }
+  }
+}
