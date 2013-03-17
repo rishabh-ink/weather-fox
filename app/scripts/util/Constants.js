@@ -13,8 +13,9 @@ define({
 
 	api: {
 		test: {
-			baseUrl: "http://localhost:3501/data/sample-cities.json",
+			baseUrl: "/data/sample-cities.json",
 			methods: {
+				weather: "687279a3ea30ea78c978b1bf6e235055"
 			}
 		},
 
