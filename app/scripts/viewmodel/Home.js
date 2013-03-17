@@ -75,7 +75,14 @@ function(
       );
 
       geoPromise.progress(function(data) {
-        debug.info("viewmodel.Home", "fetchLocation", "Please wait...", data);
+        jQuery.mobile.loading("show", {
+          text: data,
+          textVisible: true
+        });
+      });
+
+      geoPromise.always(function() {
+        jQuery.mobile.loading("hide");
       });
 
       geoPromise.fail(
@@ -142,10 +149,6 @@ function(
           debug.log("viewmodel.Home", "fetchWeather", "Saving to localStorage...");
           self.save(data);
         }
-      });
-
-      weatherPromise.progress(function(data) {
-        debug.info("viewmodel.Home", "fetchWeather", "Please wait...", data);
       });
 
       weatherPromise.fail(function() {

@@ -66,14 +66,14 @@
 
       debug.log("main", "Setting up ajaxStart and ajaxStop event handlers...");
       jQuery(document).ajaxStart(function() {
-        $.mobile.loading("show", {
+        jQuery.mobile.loading("show", {
           text: "Please wait...",
           textVisible: true
         });
       });
 
       jQuery(document).ajaxStop(function() {
-        $.mobile.loading("hide");
+        jQuery.mobile.loading("hide");
       });
 
       jQuery(document).on("pageinit", function(event) {
