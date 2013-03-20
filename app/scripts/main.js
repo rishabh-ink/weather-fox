@@ -85,7 +85,7 @@
         page.name = page.node.data("page-name");
 
         debug.log("main", "Cleaning KO node", page);
-        ko.cleanNode(page.node.get(0));
+        // ko.cleanNode(page.node.get(0));
       });
 
       jQuery(document).ready(function() {

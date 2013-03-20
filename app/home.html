@@ -7,12 +7,12 @@
 <body>
     <div class="today cartographer" data-page-name="home" data-role="page" data-theme="a">
         <div data-role="panel" id="main-menu" data-display="push">
-        <ul data-role="listview" data-theme="a">
-          <li data-icon="home"><a href="/home.html">Home</a></li>
-          <li data-icon="gear"><a href="/settings.html">Settings</a></li>
-          <li data-icon="info"><a href="/about.html">About</a></li>
-        </ul>
-      </div>
+            <ul data-role="listview" data-theme="a">
+                <li data-icon="home"><a href="/home.html">Home</a></li>
+                <li data-icon="gear"><a href="/settings.html">Settings</a></li>
+                <li data-icon="info"><a href="/about.html">About</a></li>
+            </ul>
+        </div>
         <header data-role="header">
             <a href="#main-menu" data-icon="bars">Menu</a>
             <h1>Home</h1>
@@ -41,6 +41,9 @@
                     <div class="condition-date" data-bind="text: city.weather.condition.date"></div>
                 </div>
             </div>
+            <div class="forecast">
+
+            </div>
             <!-- /ko -->
 
             <!-- ko ifnot: available -->
@@ -51,8 +54,8 @@
                     <p>Just tap the Start button below to get the latest weather.</p>
                     <button data-bind="click: refresh" data-icon="arrow-r">Start</button></div>
                 </div>
-            <!-- /ko -->
-        </section>
-    </div>
-</body>
-</html>
+                <!-- /ko -->
+            </section>
+        </div>
+    </body>
+    </html>

@@ -18,6 +18,29 @@
         <h1>Settings</h1>
       </header>
       <section data-role="content">
+        <form action="">
+          <ul data-role="listview" data-inset="true">
+
+            <li data-role="fieldcontain">
+              <label for="auto-detect-location">Auto detect my location:</label>
+              <select name="auto-detect-location" id="auto-detect-location" data-role="slider">
+                <option value="off">Off</option>
+                <option value="on" selected="selected">On</option>
+              </select>
+            </li>
+
+            <li data-role="fieldcontain">
+              <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>Unit of measurement:</legend>
+                <input type="radio" name="unit-system" id="unit-system-metric" value="unit-system-metric" checked="checked" />
+                <label for="unit-system-metric">Metric</label>
+
+                <input type="radio" name="unit-system" id="unit-system-imperial" value="unit-system-imperial" />
+                <label for="unit-system-imperial">Imperial</label>
+              </fieldset>
+            </li>
+          </ul>
+        </form>
       </section>
     </div>
 </body>
