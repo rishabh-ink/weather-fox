@@ -61,7 +61,7 @@ function(
 			debug.log("util.GeoLocation", "failure");
 
 			debug.warn("util.GeoLocation", "geolocation not available", error);
-			self.deferred.reject("Unable to obtain your location. Please check your location settings.");
+			self.deferred.reject("Unable to obtain your geolocation. " + error.message);
 		};
 
 		return self;

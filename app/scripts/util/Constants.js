@@ -78,7 +78,16 @@ define({
 		}
 	},
 
-	settings: {},
+	unitSystems: {
+		METRIC: "c",
+		IMPERIAL: "f"
+	}
+
+	settings: {
+		autoDetectLocation: true,
+		currentLocation: "",
+		unitSystem: unitSystems.METRIC
+	},
 
 	icons: {
 		themes: {
