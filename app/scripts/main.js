@@ -29,7 +29,8 @@
     'model.weather.Forecast':    "model/weather/Forecast",
     'model.weather.Units':       "model/weather/Units",
 
-    'viewmodel.Home':            "viewmodel/Home"
+    'viewmodel.Home':            "viewmodel/Home",
+    'viewmodel.Settings':        "viewmodel/Settings"
     },
 
     use: {
@@ -46,7 +47,7 @@
     "lib.jquery-mobile",
     "lib.use!lib.debug",
     "viewmodel.Home",
-    "model.City"
+    "viewmodel.Settings"
   ], function(
     domReady,
     jQuery,
@@ -54,20 +55,21 @@
     jQm,
     debug,
     HomeViewModel,
-    City
+    SettingsViewModel
   ) {
     domReady(function() {
 
       debug.info("main", "Application initialized...");
 
       var viewModels = {
-        home: HomeViewModel.create()
+        home: HomeViewModel.create(),
+        settings: SettingsViewModel.create()
       };
 
-      jQuery(document).on("pageinit", function(event) {
+      jQuery(document).on("pagebeforecreate", function(event) {
         var page = {};
 
-        debug.log("main", "pageinit fired.", page);
+        debug.log("main", "pagebeforecreate fired.", page);
 
         page.node = jQuery(event.target);
         page.name = page.node.data("page-name");

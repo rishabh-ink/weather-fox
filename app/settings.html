@@ -21,17 +21,21 @@
         <form action="">
           <ul data-role="listview" data-inset="true">
 
-            <li data-role="fieldcontain">
-              <label for="auto-detect-location">Auto detect my location:</label>
-              <select name="auto-detect-location" id="auto-detect-location" data-role="slider">
-                <option value="off">Off</option>
-                <option value="on" selected="selected">On</option>
+            <li>
+              <label for="auto-detect-location">Auto detect my location</label>
+              <select id="auto-detect-location"
+                      data-role="slider"
+                      name="auto-detect-location"
+                      data-bind="options: autoDetectLocationOptions,
+                                 optionsText: 'text',
+                                 optionsValue: 'value',
+                                 value: autoDetectLocation">
               </select>
             </li>
 
-            <li data-role="fieldcontain">
+            <li>
               <fieldset data-role="controlgroup" data-type="horizontal">
-                <legend>Unit of measurement:</legend>
+                <legend>Unit of measurement</legend>
                 <input type="radio" name="unit-system" id="unit-system-metric" value="unit-system-metric" checked="checked" />
                 <label for="unit-system-metric">Metric</label>
 

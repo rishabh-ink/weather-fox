@@ -34,11 +34,26 @@ function(
     Module.prototype.init = function() {
       debug.log("viewmodel.Settings", "init");
 
-      self.autoDetectLocation = ko.observable(true);
+      self.autoDetectLocation = ko.observable({
+        value: true,
+        text: "On"
+      });
       self.currentLocation = ko.observable("");
       self.unitSystem = ko.observable();
+
+      self.autoDetectLocationOptions = ko.observableArray([
+        { value: false, text: "Off" },
+        { value: true, text: "On" }
+      ]);
     };
 
+    Module.prototype.save = function() {
+      debug.log("viewmodel.Settings", "save");
+    };
+
+    Module.prototype.load = function() {
+      debug.log("viewmodel.Settings", "load");
+    };
 
     self.init();
 

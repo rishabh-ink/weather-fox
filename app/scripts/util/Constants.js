@@ -81,12 +81,12 @@ define({
 	unitSystems: {
 		METRIC: "c",
 		IMPERIAL: "f"
-	}
+	},
 
 	settings: {
 		autoDetectLocation: true,
 		currentLocation: "",
-		unitSystem: unitSystems.METRIC
+		unitSystem: "c"
 	},
 
 	icons: {
