@@ -34,7 +34,7 @@ function(
 			var property = null;
 
 			if(data) {
-				debug.group("util.Mapper", "map", "Mapping...");
+				debug.groupCollapsed("util.Mapper", "map", "Mapping...");
 				for(property in data) {
 					console.log("Mapping", {
 						property: property,

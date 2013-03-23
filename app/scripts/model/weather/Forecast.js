@@ -38,7 +38,7 @@
 
       var mapper = Mapper.create();
 
-      debug.group("model.weather.Forecast", "applyMappings", "Mapping...");
+      debug.groupCollapsed("model.weather.Forecast", "applyMappings", "Mapping...");
 
       if(data.length) {
         jQuery.each(data, function(index, value) {
