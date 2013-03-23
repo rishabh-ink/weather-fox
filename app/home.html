@@ -16,9 +16,7 @@
         <header data-role="header">
             <a href="#main-menu" data-icon="bars">Menu</a>
             <h1>Home</h1>
-            <!-- ko if: available -->
-            <button data-bind="click: refresh" data-icon="refresh">Refresh</button>
-            <!-- /ko -->
+            <button data-bind="visible: available, click: refresh" data-icon="refresh">Refresh</button>
         </header>
         <section data-role="content">
             <!-- ko if: available -->
