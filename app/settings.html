@@ -6,16 +6,10 @@
 </head>
 <body>
     <div data-page-name="settings" data-role="page" data-theme="a">
-      <div data-role="panel" id="main-menu" data-display="push">
-        <ul data-role="listview" data-theme="a">
-          <li data-icon="delete"><a href="/home.html">Home</a></li>
-          <li data-icon="gear"><a href="/settings.html">Settings</a></li>
-          <li data-icon="info"><a href="/about.html">About</a></li>
-        </ul>
-      </div>
       <header data-role="header">
-        <a href="#main-menu" data-icon="bars">Menu</a>
+        <a href="#" data-icon="back">Back</a>
         <h1>Settings</h1>
+        <a href="#" data-icon="ok">Save</a>
       </header>
       <section data-role="content">
         <form action="">
@@ -36,10 +30,20 @@
             <li>
               <fieldset data-role="controlgroup" data-type="horizontal">
                 <legend>Unit of measurement</legend>
-                <input type="radio" name="unit-system" id="unit-system-metric" value="unit-system-metric" checked="checked" />
+                <input id="unit-system-metric"
+                       type="radio"
+                       name="unit-system"
+                       value="metric"
+                       data-bind="checked: unitSystem"
+                />
                 <label for="unit-system-metric">Metric</label>
 
-                <input type="radio" name="unit-system" id="unit-system-imperial" value="unit-system-imperial" />
+                <input id="unit-system-imperial"
+                       type="radio"
+                       name="unit-system"
+                       value="imperial"
+                       data-bind="checked: unitSystem"
+                />
                 <label for="unit-system-imperial">Imperial</label>
               </fieldset>
             </li>

@@ -79,8 +79,8 @@ define({
 	},
 
 	unitSystems: {
-		METRIC: "c",
-		IMPERIAL: "f"
+		metric: "c",
+		imperial: "f"
 	},
 
 	settings: {

@@ -39,7 +39,7 @@ function(
         text: "On"
       });
       self.currentLocation = ko.observable("");
-      self.unitSystem = ko.observable();
+      self.unitSystem = ko.observable("imperial");
 
       self.autoDetectLocationOptions = ko.observableArray([
         { value: false, text: "Off" },
