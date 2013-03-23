@@ -7,14 +7,14 @@
 <body>
     <div data-page-name="settings" data-role="page" data-theme="a">
       <header data-role="header">
-        <a href="#" data-icon="back">Back</a>
+        <a href="/home.html" data-rel="back" data-icon="back">Back</a>
         <h1>Settings</h1>
-        <a href="#" data-icon="ok">Save</a>
+        <a href="#" data-icon="check">Save</a>
       </header>
       <section data-role="content">
         <form action="">
           <ul data-role="listview" data-inset="true">
-
+            <li data-role="list-divider">Location</li>
             <li>
               <label for="auto-detect-location">Auto detect my location</label>
               <select id="auto-detect-location"
@@ -26,7 +26,7 @@
                                  value: autoDetectLocation">
               </select>
             </li>
-
+            <li data-role="list-divider">User interface</li>
             <li>
               <fieldset data-role="controlgroup" data-type="horizontal">
                 <legend>Unit of measurement</legend>
