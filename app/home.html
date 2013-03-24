@@ -39,22 +39,66 @@
                     <div class="condition-date" data-bind="text: city.weather.condition.date"></div>
                 </div>
             </div>
-            <div class="forecast">
 
-            </div>
             <div class="others">
-                <p>condition.temp: <span data-bind="text: city.weather.condition.temp"></span></p>
-                <p>condition.text: <span data-bind="text: city.weather.condition.text"></span></p>
+                <div class="astronomy">
+                    <div class="sunrise">
+                        <p class="value" data-bind="text: city.weather.astronomy.sunrise"></p>
+                        <p class="text">Sunrise</p>
+                    </div>
+                    <div class="sunset">
+                        <p class="value" data-bind="text: city.weather.astronomy.sunset"></p>
+                        <p class="text">Sunset</p>
+                    </div>
+                </div>
 
-                <p>wind.chill: <span data-bind="text: city.weather.wind.chill"></span></p>
-                <p>wind.direction: <span data-bind="text: city.weather.wind.direction"></span></p>
-                <p>wind.speed: <span data-bind="text: city.weather.wind.speed"></span></p>
-                <p>atmosphere.humidity: <span data-bind="text: city.weather.atmosphere.humidity"></span></p>
-                <p>atmosphere.pressure: <span data-bind="text: city.weather.atmosphere.pressure"></span></p>
-                <p>atmosphere.rising: <span data-bind="text: city.weather.atmosphere.rising"></span></p>
-                <p>atmosphere.visibility: <span data-bind="text: city.weather.atmosphere.visibility"></span></p>
-                <p>astronomy.sunrise: <span data-bind="text: city.weather.astronomy.sunrise"></span></p>
-                <p>astronomy.sunset: <span data-bind="text: city.weather.astronomy.sunset"></span></p>
+                <div class="wind">
+                    <div class="chill">
+                        <p>
+                            <span class="value" data-bind="text: city.weather.wind.chill"></span>
+                            <span class="units" data-bind="html: city.weather.units.temperatureD"></span>
+                        </p>
+                        <p class="text">Chill</p>
+                    </div>
+                    <div class="direction">
+                        <p>
+                            <span class="value" data-bind="text: city.weather.wind.direction"></span>
+                            <span class="units">&deg;</span>
+                        </p>
+                        <p class="text">Direction</p>
+                    </div>
+                    <div class="speed">
+                        <p>
+                            <span class="value" data-bind="text: city.weather.wind.speed"></span>
+                            <span class="units" data-bind="text: city.weather.units.speed"></span>
+                        </p>
+                        <p class="text">Speed</p>
+                    </div>
+                </div>
+
+                <div class="atmosphere">
+                    <div class="humidity">
+                        <p>
+                            <span class="value" data-bind="text: city.weather.atmosphere.humidity"></span>
+                            <span class="units" data-bind="text: city.weather.units.pressure"></span>
+                        </p>
+                        <p class="text">Humidity</p>
+                    </div>
+                    <div class="pressure">
+                        <p>
+                            <span class="value" data-bind="text: city.weather.atmosphere.pressure"></span>
+                            <span class="units" data-bind="text: city.weather.units.pressure"></span>
+                        </p>
+                        <p class="text">Pressure</p>
+                    </div>
+                    <div class="visibility">
+                        <p>
+                            <span class="value" data-bind="text: city.weather.atmosphere.visibility"></span>
+                            <span class="units" data-bind="text: city.weather.units.distance"></span>
+                        </p>
+                        <p class="text">Visibility</p>
+                    </div>
+                </div>
             </div>
             <!-- /ko -->
 

@@ -65,3 +65,55 @@
     }
   }
 }
+
+.wind,
+.atmosphere {
+  @extend .ui-grid-b;
+
+  text-align: center;
+
+  .chill,
+  .humidity {
+    @extend .ui-block-a;
+  }
+
+  .direction,
+  .pressure {
+    @extend .ui-block-b;
+  }
+
+  .speed,
+  .visibility {
+    @extend .ui-block-c;
+  }
+}
+
+.astronomy {
+  @extend .ui-grid-a;
+
+  text-align: center;
+
+  .sunrise {
+    @extend .ui-block-a;
+  }
+
+  .sunset {
+    @extend .ui-block-b;
+  }
+}
+
+.others {
+  .text {
+    color: $grayLight;
+    text-transform: uppercase;
+  }
+
+  .units {
+    color: $grayLight;
+    font-weight: normal;
+  }
+
+  .value {
+    font-weight: bold;
+  }
+}
