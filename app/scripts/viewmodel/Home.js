@@ -108,7 +108,9 @@ function(
 
           self.errorHandler.showMessage({
             text: data,
-            textVisible: true
+            textVisible: true,
+            textonly: true,
+            theme: "e",
           }, Constants.errors.timeoutLong);
         }
       );
@@ -174,7 +176,9 @@ function(
 
             self.errorHandler.showMessage({
               text: "Could not obtain weather information for your city.",
-              textVisible: true
+              textVisible: true,
+              textonly: true,
+              theme: "e",
             }, Constants.errors.timeoutLong);
           }
         } else {
@@ -195,7 +199,9 @@ function(
 
         self.errorHandler.showMessage({
           text: "Sorry, could not obtain weather information. Please try again.",
-          textVisible: true
+          textVisible: true,
+          textonly: true,
+          theme: "e",
         }, Constants.errors.timeoutLong);
       });
     };
