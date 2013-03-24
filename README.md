@@ -3,7 +3,7 @@ Weather Fox
 
 ## Introduction
 
-A weather app for Firefox OS.
+A weather app for Firefox OS and other HTML5-complaint devices.
 
 Version: **0.0.1**
 
