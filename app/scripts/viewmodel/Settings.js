@@ -72,6 +72,10 @@ function(
       debug.log("viewmodel.Settings", "save");
 
       self.storage.save(Constants.keyrings.storage.SETTINGS, self.settings);
+
+      // Allow default action by returning true.
+      // See http://knockoutjs.com/documentation/click-binding.html#note_3_allowing_the_default_click_action
+      return true;
     };
 
     Module.prototype.load = function() {
