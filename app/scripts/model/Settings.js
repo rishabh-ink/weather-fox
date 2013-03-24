@@ -30,8 +30,14 @@
       self.currentLocation = ko.observable("");
       self.unitSystem = ko.observable("metric");
 
-      self.notAutoDetectLocation = ko.computed(function() {
-        return !self.autoDetectLocation();
+      self.notAutoDetectLocation = ko.computed({
+        read: function() {
+          return !self.autoDetectLocation();
+        },
+
+        write: function(newValue) {
+
+        }
       });
     };
 

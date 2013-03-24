@@ -45,9 +45,9 @@ function(
 						if("undefined" !== typeof data[property]) {
 							if(null !== data[property]) {
 								module[property](data[property]);
+							} else {
+								module[property]("n/a");
 							}
-						} else {
-							module[property]("n/a");
 						}
 						// module[property]((data[property] && null !== data[property]) ? data[property] : "n/a");
 					}
