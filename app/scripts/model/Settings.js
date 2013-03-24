@@ -26,7 +26,7 @@
     Settings.prototype.init = function() {
       debug.log("model.Settings", "init");
 
-      self.autoDetectLocation = ko.observable(true);
+      self.autoDetectLocation = ko.observable(1);
       self.currentLocation = ko.observable("");
       self.unitSystem = ko.observable("metric");
     };

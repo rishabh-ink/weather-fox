@@ -48,8 +48,44 @@
     Module.prototype.applyMappings = function(data) {
       debug.log("model.weather.Condition", "applyMappings", { data: data });
 
-      var mapper = Mapper.create();
-      mapper.map(self, data);
+      // var mapper = Mapper.create();
+      // mapper.map(self, data);
+
+      if("undefined" !== typeof data.code) {
+        self.code(data.code);
+      } else {
+        self.code("n/a");
+      }
+
+      if("undefined" !== typeof data.date) {
+        self.date(data.date);
+      } else {
+        self.date("n/a");
+      }
+
+      if("undefined" !== typeof data.temp) {
+        self.temp(data.temp);
+      } else {
+        self.temp("n/a");
+      }
+
+      if("undefined" !== typeof data.text) {
+        self.text(data.text);
+      } else {
+        self.text("n/a");
+      }
+
+      if("undefined" !== typeof data.high) {
+        self.high(data.high);
+      } else {
+        self.high("n/a");
+      }
+
+      if("undefined" !== typeof data.low) {
+        self.low(data.low);
+      } else {
+        self.low("n/a");
+      }
     };
 
     self.init();

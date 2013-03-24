@@ -30,7 +30,7 @@
               <input id="current-location"
                      type="text"
                      data-bind="value: settings.currentLocation,
-                     disable: settings.autoDetectLocation,
+                     disable: (1 === settings.autoDetectLocation),
                      valueUpdate: 'afterkeydown'"
               />
             </li>

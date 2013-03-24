@@ -42,7 +42,14 @@ function(
 					});
 
 					if("undefined" !== typeof (module[property])) {
-						module[property]((data[property] && null !== data[property]) ? data[property] : "n/a");
+						if("undefined" !== typeof data[property]) {
+							if(null !== data[property]) {
+								module[property](data[property]);
+							}
+						} else {
+							module[property]("n/a");
+						}
+						// module[property]((data[property] && null !== data[property]) ? data[property] : "n/a");
 					}
 				}
 				debug.groupEnd();

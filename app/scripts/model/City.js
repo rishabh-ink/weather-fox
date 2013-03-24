@@ -46,7 +46,7 @@
         atmosphere: Atmosphere.create(),
         astronomy: Astronomy.create(),
         condition: Condition.create(),
-        forecast: Forecast.create(),
+        // forecast: Forecast.create(),
         units: Units.create()
       };
     };
@@ -77,11 +77,29 @@
 
         if("undefined" !== typeof (data.item)) {
           if("undefined" !== typeof (data.item['yweather:condition'])) {
+            debug.warn("before: applied condition mapping", {
+              'self.weather.condition.code': self.weather.condition.code(),
+              'self.weather.condition.date': self.weather.condition.date(),
+              'self.weather.condition.temp': self.weather.condition.temp(),
+              'self.weather.condition.text': self.weather.condition.text(),
+              'self.weather.condition.high': self.weather.condition.high(),
+              'self.weather.condition.low': self.weather.condition.low()
+            });
+
             self.weather.condition.applyMappings(data.item['yweather:condition']);
+
+            debug.warn("after: applied condition mapping", {
+              'self.weather.condition.code': self.weather.condition.code(),
+              'self.weather.condition.date': self.weather.condition.date(),
+              'self.weather.condition.temp': self.weather.condition.temp(),
+              'self.weather.condition.text': self.weather.condition.text(),
+              'self.weather.condition.high': self.weather.condition.high(),
+              'self.weather.condition.low': self.weather.condition.low()
+            });
           }
 
           if("undefined" !== typeof (data.item['yweather:forecast'])) {
-            self.weather.forecast.applyMappings(data.item['yweather:forecast']);
+            // self.weather.forecast.applyMappings(data.item['yweather:forecast']);
           }
         }
       }

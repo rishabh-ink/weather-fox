@@ -39,8 +39,8 @@ function(
       self.settings = Settings.create();
 
       self.autoDetectLocationOptions = ko.observableArray([
-        { value: false, text: "Off" },
-        { value: true, text: "On" }
+        { value: 0, text: "Off" },
+        { value: 1, text: "On" }
       ]);
 
       self.storage = Storage.create();
@@ -51,12 +51,10 @@ function(
 
       debug.log("viewmodel.Settings", "init", "Subscribing to self.settings.autoDetectLocation");
       self.settings.autoDetectLocation.subscribe(function(newValue) {
-        if("undefined" === typeof self.currentLocationEl) {
-          self.currentLocationEl = jQuery("#current-location");
-        }
+        self.currentLocationEl = jQuery("#current-location");
 
         debug.log("viewmodel.Settings", "init", "self.settings.autoDetectLocation.subscribe", { newValue: newValue, currentLocationEl: self.currentLocationEl });
-        if(true === newValue) {
+        if(1 === newValue) {
           self.currentLocationEl.parent()
             .addClass("ui-disabled")
             .prev().addClass("ui-disabled");

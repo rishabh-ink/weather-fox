@@ -42,6 +42,20 @@
             <div class="forecast">
 
             </div>
+            <div class="others">
+                <p>condition.temp: <span data-bind="text: city.weather.condition.temp"></span></p>
+                <p>condition.text: <span data-bind="text: city.weather.condition.text"></span></p>
+
+                <p>wind.chill: <span data-bind="text: city.weather.wind.chill"></span></p>
+                <p>wind.direction: <span data-bind="text: city.weather.wind.direction"></span></p>
+                <p>wind.speed: <span data-bind="text: city.weather.wind.speed"></span></p>
+                <p>atmosphere.humidity: <span data-bind="text: city.weather.atmosphere.humidity"></span></p>
+                <p>atmosphere.pressure: <span data-bind="text: city.weather.atmosphere.pressure"></span></p>
+                <p>atmosphere.rising: <span data-bind="text: city.weather.atmosphere.rising"></span></p>
+                <p>atmosphere.visibility: <span data-bind="text: city.weather.atmosphere.visibility"></span></p>
+                <p>astronomy.sunrise: <span data-bind="text: city.weather.astronomy.sunrise"></span></p>
+                <p>astronomy.sunset: <span data-bind="text: city.weather.astronomy.sunset"></span></p>
+            </div>
             <!-- /ko -->
 
             <!-- ko ifnot: available -->

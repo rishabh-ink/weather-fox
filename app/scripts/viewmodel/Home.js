@@ -13,6 +13,7 @@ define([
   "util.GeoLocation",
   "util.Network",
   "model.City",
+  "viewmodel.Settings",
   "knockout",
   "jquery"
 ],
@@ -24,6 +25,7 @@ function(
   GeoLocation,
   Network,
   City,
+  SettingsViewModel,
   ko,
   jQuery
 ) {
@@ -47,7 +49,26 @@ function(
     Module.prototype.refresh = function() {
       debug.log("viewmodel.Home", "refresh");
 
-      self.fetchLocation();
+      var storedSettings = null;
+
+      debug.log("viewmodel.Home", "refresh", "Checking if settings are stored...");
+      if(Constants.errors.storage.FOUND === self.storage.isAlreadyAvailable(Constants.keyrings.storage.SETTINGS)) {
+        debug.log("viewmodel.Home", "refresh", "Stored settings found.");
+        storedSettings = self.storage.load(Constants.keyrings.storage.SETTINGS);
+
+        debug.log("viewmodel.Home", "refresh", "Loaded stored settings.", storedSettings);
+        if(1 === storedSettings.autoDetectLocation) {
+          debug.log("viewmodel.Home", "refresh", "Stored settings: auto detect location was true. Getting weather for current location...");
+          self.fetchLocation();
+        } else {
+          debug.log("viewmodel.Home", "refresh", "Stored settings: auto detect location was false. Getting weather for", storedSettings.currentLocation);
+          self.fetchData(storedSettings.currentLocation);
+        }
+      } else {
+        // If no settings are stored, then go for the current location.
+        debug.log("viewmodel.Home", "refresh", "No stored settings found. Getting weather for current location...");
+        self.fetchLocation();
+      }
     };
 
     Module.prototype.fetchLocation = function() {
@@ -93,13 +114,19 @@ function(
       );
     };
 
-    Module.prototype.fetchData = function() {
-      debug.log("viewmodel.Home", "fetchData");
+    /**
+     * Fetches data based on the auto-detect location setting.
+     * If auto-detect location is set to true, it uses the GPS location;
+     * Else, it uses the location text provided in the Settings page.
+     * @param location A textual location. If undefined, the GPS location is used.
+     */
+    Module.prototype.fetchData = function(location) {
+      debug.log("viewmodel.Home", "fetchData", location);
 
-      if("" !== self.city.weather.location.geo.lat()) {
-        self.fetchWeather(self.city.weather.location.getGeoLocationString());
+      if("undefined" !== typeof location) {
+        self.fetchWeather(location);
       } else {
-        self.fetchWeather(self.city.weather.location.city());
+        self.fetchWeather(self.city.weather.location.getGeoLocationString());
       }
     };
 
