@@ -25,7 +25,7 @@
                                  value: settings.autoDetectLocation">
               </select>
             </li>
-            <li>
+            <li data-bind="visible: settings.notAutoDetectLocation">
               <label for="current-location">Your location</label>
               <input id="current-location"
                      type="text"

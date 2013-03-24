@@ -46,24 +46,6 @@ function(
       self.storage = Storage.create();
 
       self.load();
-
-      // Subscribe to settings.autoDetectLocation for jQuery Mobile
-
-      debug.log("viewmodel.Settings", "init", "Subscribing to self.settings.autoDetectLocation");
-      self.settings.autoDetectLocation.subscribe(function(newValue) {
-        self.currentLocationEl = jQuery("#current-location");
-
-        debug.log("viewmodel.Settings", "init", "self.settings.autoDetectLocation.subscribe", { newValue: newValue, currentLocationEl: self.currentLocationEl });
-        if(1 === newValue) {
-          self.currentLocationEl.parent()
-            .addClass("ui-disabled")
-            .prev().addClass("ui-disabled");
-        } else {
-          self.currentLocationEl.parent()
-            .removeClass("ui-disabled")
-            .prev().removeClass("ui-disabled");
-        }
-      });
     };
 
     Module.prototype.save = function() {

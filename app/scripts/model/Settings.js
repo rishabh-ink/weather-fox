@@ -29,6 +29,10 @@
       self.autoDetectLocation = ko.observable(1);
       self.currentLocation = ko.observable("");
       self.unitSystem = ko.observable("metric");
+
+      self.notAutoDetectLocation = ko.computed(function() {
+        return !self.autoDetectLocation();
+      });
     };
 
     Settings.prototype.applyMappings = function(data) {
