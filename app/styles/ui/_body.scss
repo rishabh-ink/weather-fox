@@ -130,4 +130,17 @@
 
 .about-author {
   text-align: center;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .special-thanks {
+    list-style: none;
+    padding-left: 0;
+  }
 }
