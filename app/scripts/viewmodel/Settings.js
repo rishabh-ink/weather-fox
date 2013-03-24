@@ -13,6 +13,7 @@ define([
   "util.GeoLocation",
   "util.Network",
   "model.City",
+  "model.Settings",
   "knockout",
   "jquery"
 ],
@@ -24,6 +25,7 @@ function(
   GeoLocation,
   Network,
   City,
+  Settings,
   ko,
   jQuery
 ) {
@@ -34,25 +36,57 @@ function(
     Module.prototype.init = function() {
       debug.log("viewmodel.Settings", "init");
 
-      self.autoDetectLocation = ko.observable({
-        value: true,
-        text: "On"
-      });
-      self.currentLocation = ko.observable("");
-      self.unitSystem = ko.observable("imperial");
+      self.settings = Settings.create();
 
       self.autoDetectLocationOptions = ko.observableArray([
         { value: false, text: "Off" },
         { value: true, text: "On" }
       ]);
+
+      self.storage = Storage.create();
+
+      self.load();
+
+      // Subscribe to settings.autoDetectLocation for jQuery Mobile
+
+      debug.log("viewmodel.Settings", "init", "Subscribing to self.settings.autoDetectLocation");
+      self.settings.autoDetectLocation.subscribe(function(newValue) {
+        if("undefined" === typeof self.currentLocationEl) {
+          self.currentLocationEl = jQuery("#current-location");
+        }
+
+        debug.log("viewmodel.Settings", "init", "self.settings.autoDetectLocation.subscribe", { newValue: newValue, currentLocationEl: self.currentLocationEl });
+        if(true === newValue) {
+          self.currentLocationEl.parent()
+            .addClass("ui-disabled")
+            .prev().addClass("ui-disabled");
+        } else {
+          self.currentLocationEl.parent()
+            .removeClass("ui-disabled")
+            .prev().removeClass("ui-disabled");
+        }
+      });
     };
 
     Module.prototype.save = function() {
       debug.log("viewmodel.Settings", "save");
+
+      self.storage.save(Constants.keyrings.storage.SETTINGS, self.settings);
     };
 
     Module.prototype.load = function() {
       debug.log("viewmodel.Settings", "load");
+
+      var data = null;
+
+      if(Constants.errors.storage.FOUND === self.storage.isAlreadyAvailable(Constants.keyrings.storage.SETTINGS)) {
+        data = self.storage.load(Constants.keyrings.storage.SETTINGS);
+        self.settings.applyMappings(data);
+
+        return true;
+      } else {
+        return false;
+      }
     };
 
     self.init();

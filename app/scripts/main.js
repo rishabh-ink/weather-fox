@@ -29,6 +29,8 @@
     'model.weather.Forecast':    "model/weather/Forecast",
     'model.weather.Units':       "model/weather/Units",
 
+    'model.Settings':            "model/Settings",
+
     'viewmodel.Home':            "viewmodel/Home",
     'viewmodel.Settings':        "viewmodel/Settings"
     },

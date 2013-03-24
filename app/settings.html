@@ -9,7 +9,7 @@
       <header data-role="header">
         <a href="/home.html" data-rel="back" data-icon="back">Back</a>
         <h1>Settings</h1>
-        <a href="#" data-icon="check" data-theme="b">Save</a>
+        <a href="#" data-icon="check" data-theme="b" data-bind="click: save">Save</a>
       </header>
       <section data-role="content">
         <form action="">
@@ -23,8 +23,17 @@
                       data-bind="options: autoDetectLocationOptions,
                                  optionsText: 'text',
                                  optionsValue: 'value',
-                                 value: autoDetectLocation">
+                                 value: settings.autoDetectLocation">
               </select>
+            </li>
+            <li>
+              <label for="current-location">Your location</label>
+              <input id="current-location"
+                     type="text"
+                     data-bind="value: settings.currentLocation,
+                     disable: settings.autoDetectLocation,
+                     valueUpdate: 'afterkeydown'"
+              />
             </li>
             <li data-role="list-divider">User interface</li>
             <li>
@@ -34,7 +43,7 @@
                        type="radio"
                        name="unit-system"
                        value="metric"
-                       data-bind="checked: unitSystem"
+                       data-bind="checked: settings.unitSystem"
                 />
                 <label for="unit-system-metric">Metric</label>
 
@@ -42,7 +51,7 @@
                        type="radio"
                        name="unit-system"
                        value="imperial"
-                       data-bind="checked: unitSystem"
+                       data-bind="checked: settings.unitSystem"
                 />
                 <label for="unit-system-imperial">Imperial</label>
               </fieldset>
