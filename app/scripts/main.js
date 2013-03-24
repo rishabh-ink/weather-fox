@@ -93,7 +93,7 @@
       });
 
       jQuery(document).ready(function() {
-        jQuery.mobile.changePage("/home.html");
+        jQuery.mobile.changePage("home.html");
       });
     });
   });
