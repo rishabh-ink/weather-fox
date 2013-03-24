@@ -81,7 +81,8 @@ define({
 
 	unitSystems: {
 		metric: "c",
-		imperial: "f"
+		imperial: "f",
+		'default': "c"
 	},
 
 	settings: {

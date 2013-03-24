@@ -59,19 +59,19 @@ function(
         debug.log("viewmodel.Home", "refresh", "Loaded stored settings.", storedSettings);
         if(1 === storedSettings.autoDetectLocation) {
           debug.log("viewmodel.Home", "refresh", "Stored settings: auto detect location was true. Getting weather for current location...");
-          self.fetchLocation();
+          self.fetchLocation(storedSettings.unitSystem);
         } else {
           debug.log("viewmodel.Home", "refresh", "Stored settings: auto detect location was false. Getting weather for", storedSettings.currentLocation);
-          self.fetchData(storedSettings.currentLocation);
+          self.fetchData(storedSettings.unitSystem, storedSettings.currentLocation);
         }
       } else {
         // If no settings are stored, then go for the current location.
         debug.log("viewmodel.Home", "refresh", "No stored settings found. Getting weather for current location...");
-        self.fetchLocation();
+        self.fetchLocation(Constants.unitSystems.default);
       }
     };
 
-    Module.prototype.fetchLocation = function() {
+    Module.prototype.fetchLocation = function(unitSystem) {
       debug.log("viewmodel.Home", "fetchLocation");
 
       var geo = GeoLocation.create();
@@ -90,7 +90,7 @@ function(
             self.errorHandler.hideMessage();
           }
 
-          self.fetchData();
+          self.fetchData(unitSystem);
         }
       );
 
@@ -122,13 +122,13 @@ function(
      * Else, it uses the location text provided in the Settings page.
      * @param location A textual location. If undefined, the GPS location is used.
      */
-    Module.prototype.fetchData = function(location) {
+    Module.prototype.fetchData = function(unitSystem, location) {
       debug.log("viewmodel.Home", "fetchData", location);
 
       if("undefined" !== typeof location) {
-        self.fetchWeather(location);
+        self.fetchWeather(unitSystem, location);
       } else {
-        self.fetchWeather(self.city.weather.location.getGeoLocationString());
+        self.fetchWeather(unitSystem, self.city.weather.location.getGeoLocationString());
       }
     };
 
@@ -155,7 +155,7 @@ function(
       }
     };
 
-    Module.prototype.fetchWeather = function(location) {
+    Module.prototype.fetchWeather = function(unitSystem, location) {
       debug.log("viewmodel.Home", "fetchWeather");
 
       debug.log("viewmodel.Home", "fetchWeather", "Fetching weather", self.city);
@@ -165,7 +165,7 @@ function(
         textVisible: true
       });
 
-      var weatherPromise = self.network.getWeather(location);
+      var weatherPromise = self.network.getWeather(unitSystem, location);
 
       weatherPromise.done(function(data) {
         debug.log("viewmodel.Home", "fetchWeather", "Setting up weather", data);

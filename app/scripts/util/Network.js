@@ -31,10 +31,11 @@ function(
       self.errorHandler = ErrorHandler.create();
     };
 
-    Network.prototype.getWeather = function(location) {
+    Network.prototype.getWeather = function(unitSystem, location) {
       debug.log("util.Network.getWeather", "Making AJAX request", {
         location: location,
-        url: Constants.api.pipes.baseUrl
+        url: Constants.api.pipes.baseUrl,
+        unit: unitSystem
       });
 
       var weatherPromise = jQuery.ajax({
@@ -42,7 +43,8 @@ function(
         data: {
           '_id': Constants.api.pipes.methods.weather,
           '_render': "json",
-          'location': location
+          'location': location,
+          'unit': Constants.unitSystems[unitSystem]
         }
       }).promise();
 
