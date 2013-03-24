@@ -2,6 +2,15 @@
   background-image: url("../images/cartographer.png");
 }
 
+.brand {
+  @extend .ui-grid-solo;
+
+  .logo {
+    @extend .ui-block-a;
+    text-align: center;
+  }
+}
+
 .location {
   @extend .ui-grid-solo;
 
@@ -116,4 +125,8 @@
   .value {
     font-weight: bold;
   }
+}
+
+.about-author {
+  text-align: center;
 }

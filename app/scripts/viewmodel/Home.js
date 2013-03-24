@@ -171,6 +171,11 @@ function(
         if("undefined" !== typeof (data.value.items[0].results)) {
           if(null === data.value.items[0].results) {
             debug.error("viewmodel.Home", "fetchWeather", "Invalid data received.");
+
+            self.errorHandler.showMessage({
+              text: "Could not obtain weather information for your city.",
+              textVisible: true
+            }, Constants.errors.timeoutLong);
           }
         } else {
           debug.log("viewmodel.Home", "fetchWeather", "Data received, applying mappings...");
