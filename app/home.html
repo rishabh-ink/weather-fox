@@ -17,10 +17,10 @@
                 <li data-icon="info"><a href="about.html">About</a></li>
             </ul>
         </div>
-        <header data-role="header">
+        <header data-role="header" data-position="fixed">
             <a href="#main-menu" data-icon="bars">Menu</a>
             <h1>Home</h1>
-            <button data-bind="visible: available, click: refresh" data-icon="refresh">Refresh</button>
+            <button data-bind="click: refresh" data-icon="refresh">Refresh</button>
         </header>
         <section data-role="content">
             <!-- ko if: available -->
@@ -107,14 +107,17 @@
             <!-- /ko -->
 
             <!-- ko ifnot: available -->
-            <div class="ui-grid-solo">
-                <div class="ui-block-a">
-                    <h2>Welcome!</h2>
-                    <p>This is a <span class="label label-important">pre-alpha</span> version. It lacks a lot of features (caching, user experience etc.) and may be buggy.</p>
-                    <p>Just tap the Start button below to get the latest weather.</p>
-                    <button data-bind="click: refresh" data-icon="arrow-r">Start</button></div>
+            <div class="help">
+                <div class="menu-help">
+                    <img src="images/arrow-left.png" alt="" />
+                    <p>Tap <strong>Menu</strong> for more options.</p>
                 </div>
-                <!-- /ko -->
+                <div class="start-help">
+                    <img src="images/arrow-right.png" alt="" />
+                    <p>Tap <strong>Refresh</strong> to get started!</p>
+                </div>
+            </div>
+            <!-- /ko -->
             </section>
         </div>
     </body>

@@ -144,3 +144,17 @@
     padding-left: 0;
   }
 }
+
+.help {
+  @extend .ui-grid-a;
+
+  .menu-help {
+    @extend .ui-block-a;
+  }
+
+  .start-help {
+    @extend .ui-block-b;
+
+    text-align: right;
+  }
+}
