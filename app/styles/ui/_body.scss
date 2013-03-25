@@ -115,6 +115,7 @@
   .text {
     color: $grayLight;
     text-transform: uppercase;
+    margin-top: 0;
   }
 
   .units {
@@ -125,6 +126,10 @@
   .value {
     font-weight: bold;
     font-size: $fontSizeBig;
+  }
+
+  .info-row {
+    margin-bottom: 0;
   }
 }
 
