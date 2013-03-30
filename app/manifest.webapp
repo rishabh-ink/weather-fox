@@ -1,0 +1,13 @@
+{
+  "name": "WeatherFox",
+  "description": "WeatherFox displays the current weather conditions for a given location.",
+  "launch_path": "index.html",
+  "icons": {
+    "128": "/images/fox.png"
+  },
+  "developer": {
+    "name": "Rishabh Rao",
+    "url": "http://rishabhsrao.github.com"
+  },
+  "default_locale": "en"
+}

@@ -3,7 +3,7 @@ Weather Fox
 
 ## Introduction
 
-A weather app for Firefox OS and other HTML5-complaint devices.
+WeatherFox displays the current weather conditions for a given location.
 
 Version: **0.0.1**
 

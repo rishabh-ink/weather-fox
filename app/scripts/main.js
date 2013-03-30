@@ -83,10 +83,10 @@
       jQuery(document).on("pageremove", function(event) {
         var page = {};
 
-        debug.log("main", "pageremove fired.", page);
-
         page.node = jQuery(event.target);
         page.name = page.node.data("page-name");
+
+        debug.log("main", "pageremove fired.", page);
 
         // debug.log("main", "Cleaning KO node", page);
         // ko.cleanNode(page.node.get(0));
