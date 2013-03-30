@@ -3,7 +3,14 @@
   "description": "WeatherFox displays the current weather conditions for a given location.",
   "launch_path": "index.html",
   "icons": {
-    "128": "/images/fox.png"
+    "16": "/images/branding/icon/icon-16.png",
+    "30": "/images/branding/icon/icon-30.png",
+    "32": "/images/branding/icon/icon-32.png",
+    "48": "/images/branding/icon/icon-48.png",
+    "60": "/images/branding/icon/icon-60.png",
+    "64": "/images/branding/icon/icon-64.png",
+    "128": "/images/branding/icon/icon-128.png",
+    "256":  "/images/branding/icon/icon-256.png"
   },
   "developer": {
     "name": "Rishabh Rao",

@@ -8,9 +8,7 @@
 
     <name>WeatherFox</name>
 
-    <description>
-        A weather app for Firefox OS and other HTML5-complaint devices.
-    </description>
+    <description>WeatherFox displays the current weather conditions for a given location.</description>
 
     <author href="http://rishabhsrao.github.com" email="rishabhsrao@gmail.com">
         Rishabh Rao
@@ -55,20 +53,20 @@
     -->
 
     <!-- Define app icon for each platform. -->
-    <icon src="images/branding/fox.png" />
-    <icon src="images/branding/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
-    <icon src="images/branding/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
-    <icon src="images/branding/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
-    <icon src="images/branding/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
-    <icon src="images/branding/icon/blackberry/icon-80.png"     gap:platform="blackberry" />
-    <icon src="images/branding/icon/blackberry/icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
-    <icon src="images/branding/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
-    <icon src="images/branding/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
-    <icon src="images/branding/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="images/branding/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
-    <icon src="images/branding/icon/webos/icon-64.png"          gap:platform="webos" />
-    <icon src="images/branding/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
-    <icon src="images/branding/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
+    <icon src="images/branding/icon/icon-128.png" />
+    <icon src="images/branding/icon/icon-36.png"    gap:platform="android"    gap:density="ldpi" />
+    <icon src="images/branding/icon/icon-48.png"    gap:platform="android"    gap:density="mdpi" />
+    <icon src="images/branding/icon/icon-72.png"    gap:platform="android"    gap:density="hdpi" />
+    <icon src="images/branding/icon/icon-96.png"    gap:platform="android"    gap:density="xhdpi" />
+    <icon src="images/branding/icon/icon-80.png"    gap:platform="blackberry" />
+    <icon src="images/branding/icon/icon-80.png"    gap:platform="blackberry" gap:state="hover"/>
+    <icon src="images/branding/icon/icon-57.png"    gap:platform="ios"        width="57" height="57" />
+    <icon src="images/branding/icon/icon-72.png"    gap:platform="ios"        width="72" height="72" />
+    <icon src="images/branding/icon/icon-57-2x.png" gap:platform="ios"        width="114" height="114" />
+    <icon src="images/branding/icon/icon-72-2x.png" gap:platform="ios"        width="144" height="144" />
+    <icon src="images/branding/icon/icon-64.png"    gap:platform="webos" />
+    <icon src="images/branding/icon/icon-48.png"    gap:platform="winphone" />
+    <icon src="images/branding/icon/icon-173.png"   gap:platform="winphone"   gap:role="background" />
 
     <!-- Define app splash screen for each platform. -->
     <!--
