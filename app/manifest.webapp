@@ -1,7 +1,7 @@
 {
   "name": "WeatherFox",
   "description": "WeatherFox displays the current weather conditions for a given location.",
-  "launch_path": "/index.html",
+  "launch_path": "/weather-fox/index.html",
   "icons": {
     "16": "/images/branding/icon/icon-16.png",
     "30": "/images/branding/icon/icon-30.png",
