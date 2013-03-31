@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WeatherFox</title>
+</head>
+<body>
+    <div class="today cartographer" data-page-name="home" data-role="page" data-theme="a">
+        <div data-role="panel" id="main-menu" data-display="push" data-theme="a">
+            <div class="brand">
+                <div class="logo">
+                    <img src="images/branding/fox.png" alt="">
+                </div>
+            </div>
+            <ul data-role="listview" data-theme="a">
+                <li data-icon="gear"><a href="settings.html">Settings</a></li>
+                <li data-icon="info"><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <header data-role="header" data-position="fixed">
+            <a href="#main-menu" data-icon="bars">Menu</a>
+            <h1>WeatherFox</h1>
+            <button data-bind="click: refresh" data-icon="refresh">Refresh</button>
+        </header>
+        <section data-role="content">
+            <!-- ko if: available -->
+            <div class="location">
+                <div class="city">
+                    <span data-bind="text: city.weather.location.city"></span>
+                </div>
+                <div class="country">
+                    <span data-bind="text: city.weather.location.country"></span>
+                </div>
+            </div>
+            <div class="info">
+                <div class="current-temperature">
+                    <span class="value" data-bind="text: city.weather.condition.temp"></span>
+                    <span class="units" data-bind="html: city.weather.units.temperatureD"></span>
+                </div>
+                <div class="icon"><img data-bind="attr: { src: city.weather.condition.icon, alt: city.weather.condition.text }"></div>
+                <div class="text">
+                    <div class="condition-text" data-bind="text: city.weather.condition.text"></div>
+                    <div class="condition-date" data-bind="text: city.weather.condition.date"></div>
+                </div>
+            </div>
+
+            <div class="others">
+                <div class="astronomy">
+                    <div class="sunrise">
+                        <p class="info-row value" data-bind="text: city.weather.astronomy.sunrise"></p>
+                        <p class="text">Sunrise</p>
+                    </div>
+                    <div class="sunset">
+                        <p class="info-row value" data-bind="text: city.weather.astronomy.sunset"></p>
+                        <p class="text">Sunset</p>
+                    </div>
+                </div>
+
+                <div class="wind">
+                    <div class="chill">
+                        <p class="info-row">
+                            <span class="value" data-bind="text: city.weather.wind.chill"></span>
+                            <span class="units" data-bind="html: city.weather.units.temperatureD"></span>
+                        </p>
+                        <p class="text">Chill</p>
+                    </div>
+                    <div class="direction">
+                        <p class="info-row">
+                            <span class="value" data-bind="text: city.weather.wind.direction"></span>
+                            <span class="units">&deg;</span>
+                        </p>
+                        <p class="text">Direction</p>
+                    </div>
+                    <div class="speed">
+                        <p class="info-row">
+                            <span class="value" data-bind="text: city.weather.wind.speed"></span>
+                            <span class="units" data-bind="text: city.weather.units.speed"></span>
+                        </p>
+                        <p class="text">Speed</p>
+                    </div>
+                </div>
+
+                <div class="atmosphere">
+                    <div class="humidity">
+                        <p class="info-row">
+                            <span class="value" data-bind="text: city.weather.atmosphere.humidity"></span>
+                            <span class="units" data-bind="text: city.weather.units.pressure"></span>
+                        </p>
+                        <p class="text">Humidity</p>
+                    </div>
+                    <div class="pressure">
+                        <p class="info-row">
+                            <span class="value" data-bind="text: city.weather.atmosphere.pressure"></span>
+                            <span class="units" data-bind="text: city.weather.units.pressure"></span>
+                        </p>
+                        <p class="text">Pressure</p>
+                    </div>
+                    <div class="visibility">
+                        <p class="info-row">
+                            <span class="value" data-bind="text: city.weather.atmosphere.visibility"></span>
+                            <span class="units" data-bind="text: city.weather.units.distance"></span>
+                        </p>
+                        <p class="text">Visibility</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko ifnot: available -->
+            <div class="help">
+                <div class="menu-help">
+                    <img src="images/arrow-left.png" alt="">
+                    <p>Tap <strong>Menu</strong> for more options.</p>
+                </div>
+                <div class="start-help">
+                    <img src="images/arrow-right.png" alt="">
+                    <p>Tap <strong>Refresh</strong> to get started!</p>
+                </div>
+            </div>
+            <div class="about-author">
+                <h1>WeatherFox</h1>
+                <p><strong>A weather app for Firefox OS and other HTML5-complaint devices.</strong></p>
+                <p>
+                  <img src="images/branding/fox.png" alt="">
+                </p>
+            </div>
+            <!-- /ko -->
+            </section>
+        </div>
+    </body>
+    </html>
