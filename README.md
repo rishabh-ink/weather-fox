@@ -1,7 +1,5 @@
-Weather Fox
+Weather Fox [![Build Status](https://travis-ci.org/rishabhsrao/weather-fox.png)](https://travis-ci.org/rishabhsrao/weather-fox)
 -----------
-
-[![Build Status](https://travis-ci.org/rishabhsrao/weather-fox.png)](https://travis-ci.org/rishabhsrao/weather-fox)
 
 ## Introduction
 
