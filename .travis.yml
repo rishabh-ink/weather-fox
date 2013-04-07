@@ -1,8 +1,11 @@
 language: node_js
 node_js: "0.8"
 install: "npm install && bower install"
-script: "grunt build"
-before_install:
+
+before_script:
  - sudo apt-get update -qq
  - sudo apt-get install -qq ruby
  - gem install compass
+script: "grunt build"
+before_install:
+ - bower cache-clean
