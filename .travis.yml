@@ -2,9 +2,9 @@ language: node_js
 node_js: "0.8"
 before_install:
  - echo "*** Installing bower..."
- - npm install bower
+ - npm install -g bower
  - echo "*** Installing grunt..."
- - npm install grunt
+ - npm install -g grunt
 install:
  - echo "*** Installing node modules..."
  - npm install
