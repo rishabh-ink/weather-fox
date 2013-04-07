@@ -1,4 +1,4 @@
 language: node_js
-node_js: "0.8"
+node_js: "0.9"
 install: "npm install && bower install"
 script: "grunt build"
