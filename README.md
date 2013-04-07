@@ -1,6 +1,8 @@
 Weather Fox
 -----------
 
+[![Build Status](https://travis-ci.org/rishabhsrao/weather-fox.png)](https://travis-ci.org/rishabhsrao/weather-fox)
+
 ## Introduction
 
 WeatherFox displays the current weather conditions for a given location.
