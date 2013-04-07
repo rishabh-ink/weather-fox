@@ -12,5 +12,8 @@
     "javascript-debug": "git://github.com/cowboy/javascript-debug.git",
     "knockoutjs": "http://knockoutjs.com/downloads/knockout-2.2.1.js"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "bower": "~0.8.6",
+    "grunt": "~0.4.0"
+  }
 }
