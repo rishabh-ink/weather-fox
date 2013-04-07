@@ -6,6 +6,6 @@ install:
  - bower install
 before_script:
  - sudo apt-get update -qq
- - sudo apt-get install -qq ruby
+ - sudo apt-get install -qq ruby nasm
  - gem install compass
-script: "grunt build"
+script: grunt build
