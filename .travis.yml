@@ -1,5 +1,10 @@
 language: node_js
 node_js: "0.8"
+before_install:
+ - echo "*** Installing bower..."
+ - npm install bower
+ - echo "*** Installing grunt..."
+ - npm install grunt
 install:
  - echo "*** Installing node modules..."
  - npm install
@@ -7,6 +12,7 @@ install:
  - bower cache-clean
  - echo "*** Installing application libraries..."
  - bower install
+ - echo "*** All done!"
 before_script:
  - ls -lR
  - sudo apt-get update -qq
