@@ -1,6 +1,14 @@
 {
   "name": "weather-fox",
+  "description": "WeatherFox displays the current weather conditions for a given location.",
+  "author": "Rishabh Rao (@rishabhsrao)",
+  "homepage": "http://rishabhsrao.github.io/blog/2013/03/10/weather-fox",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rishabhsrao/weather-fox.git"
+  },
   "version": "0.0.1",
+
   "dependencies": {},
   "devDependencies": {
     "bower": "~0.8.6",
