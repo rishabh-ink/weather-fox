@@ -1,0 +1,25 @@
+{
+  "name": "WeatherFox",
+  "description": "WeatherFox displays the current weather conditions for a given location.",
+  "launch_path": "/",
+  "icons": {
+    "16": "/images/branding/icon/icon-16.png",
+    "30": "/images/branding/icon/icon-30.png",
+    "32": "/images/branding/icon/icon-32.png",
+    "48": "/images/branding/icon/icon-48.png",
+    "60": "/images/branding/icon/icon-60.png",
+    "64": "/images/branding/icon/icon-64.png",
+    "128": "/images/branding/icon/icon-128.png",
+    "256": "/images/branding/icon/icon-256.png"
+  },
+  "developer": {
+    "name": "Rishabh Rao",
+    "url": "http://rishabhsrao.github.io"
+  },
+  "permissions": {
+    "geolocation": {
+      "description": "WeatherFox sends the current latitude and longitude of the device to the Yahoo! Weather API for obtaining the weather information. The latitude and longitude is also stored in the browser's localStorage for caching purposes. The device's location is not used in any other way. Please see http://bit.ly/weatherfox-blog for more information."
+    }
+  },
+  "default_locale": "en"
+}
