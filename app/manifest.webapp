@@ -16,5 +16,10 @@
     "name": "Rishabh Rao",
     "url": "http://rishabhsrao.github.com"
   },
+  "permissions": {
+    "geolocation": {
+      "description": "WeatherFox sends the current latitude and longitude of the device to the Yahoo! Weather API for obtaining the weather information. The latitude and longitude is also stored in the browser's localStorage for caching purposes. The device's location is not used in any other way. Please see http://bit.ly/weatherfox-blog for more information."
+    }
+  },
   "default_locale": "en"
 }
