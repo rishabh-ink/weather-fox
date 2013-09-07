@@ -27,3 +27,4 @@ This project's library dependencies are listed in [component.json](world-clock-a
 Just run `npm install && bower install` in the top level directory of this project to download the dependencies.
 
 Once done, you can run `grunt server` to run locally or `grunt build` to generate a build.
+
