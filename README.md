@@ -21,19 +21,10 @@ License: **[Apache License 2.0](/rishabhsrao/weather-fox/blob/master/LICENSE.md)
 
 ### Live app
 
-You can run WeatherFox on your favourite Web browser at [bit.ly/weatherfox-web](http://rishabhsrao.github.io/weather-fox/dist).
-
-#### Android
-* Direct APK: [Download](http://rishabhsrao.github.com/images/posts/2013-03-10-weather-fox/WeatherFox-Android.apk)
-* Short URL: [bit.ly/weatherfox-a](http://bit.ly/weatherfox-a)
-
-#### Firefox
-* Marketplace: [marketplace.firefox.com/app/weatherfox](https://marketplace.firefox.com/app/weatherfox)
-* Short URL: [bit.ly/weatherfox-fm](http://bit.ly/weatherfox-fm)
-
-#### Windows Mobile
-* Direct XAP: [Download](http://rishabhsrao.github.io/images/posts/2013-03-10-weather-fox/WeatherFox-WinMob.xap)
-* Short URL: [bit.ly/weather-wm](http://bit.ly/weather-wm)
+* Your favourite web browser: [rishabhsrao.github.io/weather-fox/dist](http://rishabhsrao.github.io/weather-fox/dist) or [bit.ly/weatherfox-web](http://bit.ly/weatherfox-web)
+* **Android**: [Download](http://rishabhsrao.github.com/images/posts/2013-03-10-weather-fox/WeatherFox-Android.apk) or [bit.ly/weatherfox-a](http://bit.ly/weatherfox-a)
+* **Firefox Marketplace**: [marketplace.firefox.com/app/weatherfox](https://marketplace.firefox.com/app/weatherfox) or [bit.ly/weatherfox-fm](http://bit.ly/weatherfox-fm)
+* **Windows Mobile**: [Download](http://rishabhsrao.github.io/images/posts/2013-03-10-weather-fox/WeatherFox-WinMob.xap) or [bit.ly/weather-wm](http://bit.ly/weather-wm)
 
 ### Technologies used
 
