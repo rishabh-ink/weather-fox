@@ -13,11 +13,11 @@ License: **[Apache License 2.0](/rishabhsrao/weather-fox/blob/master/LICENSE.md)
 
 ### Screenshots
 
-<img src="http://rishabhsrao.github.io/images/posts/2013-03-10-weather-fox/4.jpg" height="240"/>
-<img src="http://rishabhsrao.github.io/images/posts/2013-03-10-weather-fox/5.jpg" height="240" />
-<img src="http://rishabhsrao.github.io/images/posts/2013-03-10-weather-fox/7.png" height="240" />
-<img src="http://rishabhsrao.github.io/images/posts/2013-03-10-weather-fox/9.jpg" height="240" />
-<img src="http://rishabhsrao.github.io/images/posts/2013-03-10-weather-fox/10.jpg" height="240" />
+<img src="http://rishabhsrao.github.io/img/posts/2013-03-10-weather-fox/4.jpg" height="240"/>
+<img src="http://rishabhsrao.github.io/img/posts/2013-03-10-weather-fox/5.jpg" height="240" />
+<img src="http://rishabhsrao.github.io/img/posts/2013-03-10-weather-fox/7.png" height="240" />
+<img src="http://rishabhsrao.github.io/img/posts/2013-03-10-weather-fox/9.jpg" height="240" />
+<img src="http://rishabhsrao.github.io/img/posts/2013-03-10-weather-fox/10.jpg" height="240" />
 
 ### Live app
 
