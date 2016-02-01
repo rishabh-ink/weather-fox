@@ -21,5 +21,25 @@
       "description": "WeatherFox sends the current latitude and longitude of the device to the Yahoo! Weather API for obtaining the weather information. The latitude and longitude is also stored in the browser's localStorage for caching purposes. The device's location is not used in any other way. Please see http://bit.ly/weatherfox-blog for more information."
     }
   },
-  "default_locale": "en"
+  "default_locale": "en",
+  "locales": {
+    "eo": {
+      "name": "WeatherFox",
+      "description": "WeatherFox montras la aktualajn klimatkondiĉojn en specifa loko.",
+      "permissions": {
+        "geolocation": {
+          "description": "WeatherFox sendas la aktualan latitudon kaj longitudon de la aparato al API de Yahoo! Weather API por obteni la informojn pri la klimato. La latitudo kaj longitudo estas enmemorigitaj en la localStorage de la retumilo por kaŝmemorigaj celoj. La localizo de la aparato ne estas uzata en ia ajn alia maniero. Bonvole legu http://bit.ly/weatherfox-blog por pliaj informoj."
+        }
+      }
+    },
+    "it": {
+      "name": "WeatherFox",
+      "description": "WeatherFox mostra le attuali condizioni meteo per un specifico posto.",
+      "permissions": {
+        "geolocation": {
+          "description": "WeatherFox invia le attuali coordinate del dispositivo alle API di Yahoo! Weather API per ottenere le informazioni sul meteo. La latitudine e la longitudine sono conservati nel localStorage del browser per fini di caching. La localizzazione dell'apparecchio non viene usato in alcun altro modo. Leggere http://bit.ly/weatherfox-blog per maggiori informazioni."
+        }
+      }
+    }
+  }
 }
