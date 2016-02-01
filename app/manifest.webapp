@@ -37,7 +37,7 @@
       "description": "WeatherFox mostra le attuali condizioni meteo per un specifico posto.",
       "permissions": {
         "geolocation": {
-          "description": "WeatherFox invia le attuali coordinate del dispositivo alle API di Yahoo! Weather API per ottenere le informazioni sul meteo. La latitudine e la ongitudine sono conservati nel localStorage del browser per fini di caching. La localizzazione dell'apparecchio non viene usato in alcun altro modo. Leggere http://bit.ly/weatherfox-blog per maggiori informazioni."
+          "description": "WeatherFox invia le attuali coordinate del dispositivo alle API di Yahoo! Weather API per ottenere le informazioni sul meteo. La latitudine e la longitudine sono conservati nel localStorage del browser per fini di caching. La localizzazione dell'apparecchio non viene usato in alcun altro modo. Leggere http://bit.ly/weatherfox-blog per maggiori informazioni."
         }
       }
     }
